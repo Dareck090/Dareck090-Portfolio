@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>Cooking Fast| Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JavaScript/header.js"></script>
+    <script src="JavaScript/Menu_bar.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="HeaderPage" id="navbar">
+          <div class="GroupClass login-Regis">
+            <div class="logoPage">
+              <img src="img/logo_pag.png" alt="">
+            </div>
+            <div class="TitlePage">
+              <h1><span class="TitleColor">Cokking</span>| Fast</h1>
+            </div>
+            <div class="Log" id="SideLogin">
+              <a href="javascript:void(0)" class="closebtnLogin" onclick="closeLogin()">&times;</a>
+              <div class="FondoLogin" id="LoginHidden">
+                <div class="textologin">
+                  <img class="imglog" src="img/imglogin.png" alt="">
+                  <p>Regístrate y obtén acceso a áreas exclusivas.</p>
+                </div>
+                <div class="LoginOn">
+                  <a href="Login.html">Iniciar sesion</a>
+                  <div class="Register">
+                    <a href="Register.html">Registrarse</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="HeaderSearch">
+            <div class="Search" id="SearchPad">
+              <input type="text" id="search_bar" placeholder="¿Que recetas quieres hoy?"/>
+              <img src="img/img busqueda.png" class="input-icon" id="iconMove" alt="barra_de_busqueda">
+            </div>
+          </div>
+          <!--Navegacion-->
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <div class="dropdown">
+              <button class="dropdown-btn">Recetas
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="Recetas.html#Postres">Postres</a>
+                <a href="Recetas.html#Pollo">Recetas con pollo</a>
+                <a href="Recetas.html#Pescado">Recetas con pescado</a>
+              </div>
+            </div>
+            <a href="Recetas.html">Todas las recetas</a>
+          </div>
+          <span id="ButtonMenu" style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+          <span id="ButtonLogin" style="font-size:30px;cursor:pointer" onclick="openLogin()"><img src="img/login-User.png" alt=""></span>
+        </div>
+      </div>
+    </header>
+<!--Seccion mas--->
+    <section id="showcase">
+      <div class="container">
+        <div class="section1">
+          <div class="slider">
+            <ul>
+              <li>
+                <img src="img/comidas-rapidas.jpg" alt="">
+              </li>
+              <li>
+                <img src="img/platillo1.png" alt="">
+              </li>
+              <li>
+                <img src="img/platillo2.png" alt="">
+              </li>
+              <li>
+                <img src="img/platillo3.png" alt="">
+              </li>
+              <li>
+                <h1>Bienvenido a las recetas de Cokking Fast</h1>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--Seccion 2-->
+    <section id="boxes">
+      <div class="container">
+        <div class="section2">
+          <div class="column-title">
+            <h1>Recetas caseras</h1>
+          </div>
+          <div class="box">
+            <div class="img-recetas">
+              <a href="Recetas.html#recetaPasta"><img class="img-items" src="./img/pastas.png" alt="Pastas">
+                <h2 class="itemh2">Pastas</h2></a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#recetaArroz"><img class="img-items" src="./img/rice.png" alt="Recetas_con_Arroz">
+                <h2 class="itemh2">Recetas con arroz</h2></a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#Postres">
+                <img class="img-items" src="./img/postres.png" alt="Pasteles">
+              <h2 class="itemh2">Postres</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#recetaGuayaquileña">
+                <img class="img-items" src="./img/recetas_guayacas.png" alt="Ceviche">
+              <h2 class="itemh2">Recetas Guayaquileñas</h2>
+              </a>
+            </div>
+          </div>
+          <div class="column-title">
+            <h1>Recetas con pollo</h1>
+          </div>
+          <div class="box">
+            <div class="img-recetas">
+              <a href="Recetas.html#polloguisado">
+                <img class="img-items" src="https://www.cocinacaserayfacil.net/wp-content/uploads/2019/06/recetas-de-pollo-guisado.jpg" alt="recetas-de-pollo-guisado">
+                <h2 class="itemh2">Pollo guisado</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#cordonBlue">
+                <img class="img-items" src="https://www.cocinacaserayfacil.net/wp-content/uploads/2018/05/Cordon-bleu-de-pollo.jpg" alt="Cordon-bleu-de-pollo">
+              <h2 class="itemh2">Cordon Bleu</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#PolloSalsa">
+                <img class="img-items" src="https://d1uz88p17r663j.cloudfront.net/resized/7297716dbd1ed1db19fa6316395b6522_POLLO_EN_SALSA_CASERA_1200_600.jpg" alt="Pollo-en-salsa-casera">
+                <h2 class="itemh2">Pollo en salsa casera</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#wrap_pollo">
+                <img class="img-items" src="https://images.aws.nestle.recipes/resized/a9da150f9cdb178405ae0507d9806228_receta-wrap-pollo-pollos-maggi-nestle-venezuela_768_384.jpg" alt="Wrap-de-pollo">
+                <h2 class="itemh2">Wrap de pollo</h2>
+              </a>
+            </div>
+          </div>
+          <div class="column-title">
+            <h1>Postres</h1>
+          </div>
+          <div class="box">
+            <div class="img-recetas">
+              <a href="Recetas.html#Trufas">
+                <img class="img-items" src="https://i.blogs.es/9eddfa/trufas_cava_frambuesa/1366_2000.jpg" alt="Trufas-frambuesa">
+              <h2 class="itemh2">Trufas de cava y frambuesa</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#heladofruits">
+                <img class="img-items" src="https://i.blogs.es/8cca4d/heladodefrutosrojosyyogur2_1024_ma/1366_2000.webp" alt="Helado_de_fresa">
+              <h2 class="itemh2">Helado de frutos rojos y yogur</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#YogurPolos">
+                <img class="img-items" src="https://www.lavanguardia.com/files/image_948_465/uploads/2020/07/01/5efc61bb78f45.jpeg" alt="Polos_de_yogur_griego_y_frambuesas">
+              <h2 class="itemh2">Polos de yogur griego y frambuesas</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#BizcochoQueso">
+                <img class="img-items" src="https://i.blogs.es/61c612/receta-bizcocho-en-taza-de-queso-y-cerezas/1366_2000.webp" alt="receta-bizcocho-en-taza-de-queso-y-cerezas">
+              <h2 class="itemh2">Bizcocho de queso y cerezas en taza</h2>
+              </a>
+            </div>
+          </div>
+          <div class="column-title">
+            <h1>Postres</h1>
+          </div>
+          <div class="box">
+            <div class="img-recetas">
+              <a href="Recetas.html#pasta_ostiones">
+                <img class="img-items" src="https://www.midiariodecocina.com/wp-content/uploads/2021/08/Pasta-con-ostiones01.jpg" alt="Pasta_con_ostiones">
+                <h2 class="itemh2">Pasta con ostiones</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#Pasta_con_camarones">
+                <img class="img-items" src="https://www.midiariodecocina.com/wp-content/uploads/2007/03/Pasta-con-camarones03.jpg" alt="Pasta_con_camarones">
+              <h2 class="itemh2">Pasta con camarones</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#EnsaladaLenteja">
+                <img class="img-items" src="https://www.midiariodecocina.com/wp-content/uploads/2020/05/Ensalada-de-lentejas02.jpg" alt="Ensaladas">
+                <h2 class="itemh2">Ensalada de lentejas</h2>
+              </a>
+            </div>
+            <div class="img-recetas">
+              <a href="Recetas.html#croquetasAtun">
+                <img class="img-items" src="https://www.midiariodecocina.com/wp-content/uploads/2007/04/Croquetas-de-atun-01.jpg" alt="Croquetas">
+                <h2 class="itemh2">Croquetas de atun</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="wrapFooter">
+          <div class="FooterSide">
+              <img class="GrupoTI" src="img/img-grupal.jpg" alt="">
+              <h2>Hola nosotros somos un equipo que comparte recetas increibles y faciles de hacer en casa.</h2>
+          </div>
+          <div class="FooterSide">
+              <div class="img-footer">
+                <img class="more-img" src="https://images.aws.nestle.recipes/resized/d80155cd2b0725a70160fcf083571667_carne-salteada_1200_600.jpg" alt="">
+                <img class="more-img" src="https://images.aws.nestle.recipes/resized/36db6a3737d379a64a582b7a62ceb149_POllo_al_horno_1200_600.jpg" alt="">
+                <img class="more-img" src="https://images.aws.nestle.recipes/resized/7be7335698b0521a183d3cc0ddac0100_ARROZ_CREMOSO-min_1200_600.jpg" alt="">
+                <img class="more-img" src="https://d1uz88p17r663j.cloudfront.net/resized/ea7675c847a7bdf59e727e5434e13393_menestra-de-frejol_1200_600.jpg" alt="">
+              </div>
+              <div class="wrapSide">
+                <a href="Recetas.html"><h2>Leer mas...</h2></a>
+              </div>
+          </div>
+          <div class="FooterSide">
+            <h2>Si te ha gustado nuestra pagina no olvides registrarte como usuario, te noficaremos de las recetas mas vistas y que son deli.</h2>
+        </div>
+        </div>
+        <div class="wrapFooter2">
+          <p>Web Cokking Fast, Copyright &copy; 2022</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

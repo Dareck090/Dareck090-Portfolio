@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_empresarial_tecnologica</title>
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Script CDN AJAX, JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="content-full">
+        <nav class="navs" id="navs-pag">
+            <div class="nav-state">
+                <div class="logo_sa">
+                    <img src="../static/img/logo_empresarial.PNG" alt="logo_empresarial" id="img-logo">
+                    <a href="/"><span class="txt-logo">VISTA.DT</span></a>
+                </div>
+                <div class="nav-btn">
+                    <ul class="nv-ul">
+                        <li class="nv-li"><a href="{{ url_for('soluciones') }}">Soluciones</a></li>
+                        <li class="nv-li"><a href="{{ url_for('vision') }}">Vision</a></li>
+                        <li class="nv-li"><a href="{{ url_for('programas') }}">Programas</a></li>
+                        <li class="nv-li"><a href="{{ url_for('blog') }}">Blog</a></li>
+                    </ul>
+                    <button class="btn-login">
+                        <i class="bi bi-person-circle"></i>
+                        <span class="txt-lg">Entrar</span>
+                    </button>
+                    <button class="btn-start"><span class="txt-start">Empezar</span></button>
+                </div>
+            </div>
+            <div class="chat-main">
+                <button class="btn-chat" id="open-chat">
+                    <i class="bi bi-chat-text-fill icon-chat"></i>
+                </button>
+                <div class="chat-layer" id="chat-user">
+                    <div class="cht-head">
+                        <span class="cht-welcome">¡Vamos a chatear!</span>
+                        <span class="txt-cht"><i class="bi bi-circle-fill"></i>Online</span>
+                        <button type="button" class="btn-close" id="close-chat" aria-label="Close"></button>
+                    </div>
+                    <div class="cht-panel" id="panel_chat">
+                        <span class="data-time" id="time-msg"></span>
+                        <div class="chat-full" id="chat-rm">
+                            <!--chat generate-->
+                        </div>
+                        <span class="state-msg" id="msg-state"></span>
+                    </div>
+                    <div class="cht-msg">
+                        <form action="#" class="chat-form">
+                            <div class="msg-chat-panel">
+                                <input id="msg-send" placeholder="Escribe tu mensaje..." type="text">
+                            </div>
+                            <div class="smileys">
+                                <i class="bi bi-emoji-smile"></i>
+                            </div>
+                            <div class="attach-file">
+                                <i class="bi bi-paperclip"><input type="file"></i>
+                            </div>
+                            <div class="send-msg">
+                                <button id="sl-msg" class="btn-submit" type="submit" disabled><img id="icon-send" src="../static/img/icon-send.png" alt="icon-send"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <footer class="pag-footer">
+            <div class="ft-data">
+                <div class="ft-info-data item-footer">
+                    <div class="logo-data">
+                        <img id="logo" src="../static/img/logo_empresarial-red.PNG" alt="">
+                        <span class="logo-txt">VISTA.DT</span>
+                    </div>
+                    <div class="inf-dir-mail">
+                        <p>+52-1-33-12345678</p>
+                        <p>Info@misitio.com</p>
+                        <p>Av. Fray. A. Alcalde 10</p>
+                        <p>44100 Guad., Jal., México</p>
+                    </div>
+                </div>
+                <div class="ft-map-menu item-foote">
+                    <ul class="nav-footer">
+                        <li class="nv-li-footer"><a href="{{ url_for('index') }}">Inicio</a></li>
+                        <li class="nv-li-footer"><a href="{{ url_for('soluciones') }}">Soluciones</a></li>
+                        <li class="nv-li-footer"><a href="{{ url_for('vision') }}">Visones</a></li>
+                        <li class="nv-li-footer"><a href="{{ url_for('blog') }}">Blog</a></li>
+                        <li class="nv-li-footer"><button class="btn-pag-ready-sm"><span class="txt-full">Empezar</span></button></li>
+                    </ul>
+                </div>
+                <div class="ft-form-data item-foote">
+                    <form action="" class="wm-form">
+                        <span class="sub-form">Suscribite a nuestro boletin</span>
+                        <div class="email-form">
+                            <label for="email">Email*</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-submit">
+                            <button class="btn-submit"><span class="txt-submit">Enviar</span></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ft-social-private item-foote">
+                    <div class="social-share">
+                        <span class="share-title">Siguenos en:</span>
+                        <div class="icon-share">
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="copyright-site">
+                        <span class="pw-privacy"><a href="{{ url_for('privacy') }}">Política de privacidad</a></span>
+                        <span class="ft-copyright">© 2035 Creado por Dreck</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</html>

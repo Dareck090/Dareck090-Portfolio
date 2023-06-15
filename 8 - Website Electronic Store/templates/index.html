@@ -1,0 +1,191 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block 'title' %} Inicio {% endblock%}
+
+{% block 'content' %}
+    <section class="pag-home">
+        <div class="div-home-page" id="home-page">
+            <div class="div-cot-page">
+                <div class="hm-price">
+                    <span class="hm-span-price">Mejores precios</span>
+                </div>
+                <div class="hm-market">
+                    <h1 class="hm-title">Súper precios en tus artículos favoritos</h1>
+                </div>
+                <div class="hm-div">
+                    <span class="hm-more">Gana más por tu dinero</span>
+                </div>
+                <div class="hm-button">
+                    <a class="btn-buy" href="{% url 'comprar-todo' %}"><span class="txt-btn">Comprar ahora</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-prd-offers">
+        <div class="div-prd-offers">
+            <div class="prd-item-offer" id="offer-it1">
+                <span class="txt-prd">Ofertas de temporada</span>
+                <h1 class="offer-title-sm">Hasta 30% menos</h1>
+                <span class="txt-prd">En Smartphones seleccionados</span>
+                <div class="div-action-prd">
+                    <a class="btn-action" href=""><span class="txt-btn">Tienda</span></a>
+                </div>
+            </div>
+            <div class="prd-item-offer" id="offer-it2">
+                <span class="txt-prd">Recién llegados</span>
+                <h1 class="offer-title">Lleva tu sonido dondequieras</h1>
+                <span  class="txt-prd">Mejores marcas de audífonos</span>
+                <div class="div-action-prd">
+                    <a class="btn-action" href=""><span class="txt-btn">Comprar</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-clm-company">
+        <div class="clm-div-content">
+            <div class="clm-item-cmp-rm">
+                <i class="bi bi-car-front-fill icon-cmp"></i>
+                <h5 class="cmp-title">Recogida en la acera</h5>
+            </div>
+            <div class="clm-item-cmp">
+                <i class="bi bi-box2 icon-cmp"></i>
+                <h5 class="cmp-title">Envío gratis en compras de más de $[499]</h5>
+            </div>
+            <div class="clm-item-cmp-ps">
+                <i class="bi bi-bag icon-cmp"></i>
+                <h5 class="cmp-title">Precios bajos garantizados</h5>
+            </div>
+            <div class="clm-item-cmp-dis">
+                <i class="bi bi-clock-history icon-cmp "></i>
+                <h5 class="cmp-title">Disponible para ti 24/7 </h5>
+            </div>
+        </div>
+    </section>
+    <section class="sec-sellers-prd">
+        <div class="div-sellers-prd">
+            <div class="sellers-product">
+                <div class="sellers-div-main">
+                    <h3 class="sellers-title">Más vendidos</h3>
+                </div>
+                <div class="prod-six-view">
+                    {% include 'store/layout/list-product/list-6-sellers.html'%}
+                </div>
+                <div class="prod-action">
+                    <a class="btn-view-prod" href="{% url 'comprar-todo' %}">
+                        <span class="txt-btn">Ver todo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-similar-index">
+        <div class="div-similar-index">
+            <div class="inside-content">
+                <div class="div-head">
+                    <h3 class="head-title">Comprar por categoria</h3>
+                </div>
+                <div class="div-body">
+                    {% include 'store/layout/nav-index.html'%}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-banner-offer">
+        <div class="div-banner-offer">
+            <div class="inside-content-offer" id="fond-offer-1">
+                <div class="banner-figure"></div>
+                <div class="banner-body" id="banner-bd-1">
+                        <div class="div-descrip-offer">
+                            <span class="txt-banner">Ahorra hasta</span>
+                            <h1 class="tit-banner">$150</h1>
+                            <span class="txt-banner">en laptops y tabletas seleccionadas</span>
+                            <span class="txt-banner-mm">Aplican los términos y condiciones</span>
+                        </div>
+                        <div class="div-act-store">
+                            <a class="btn-store" href="">
+                                <span class="txt-btn">Tienda</span>
+                            </a>
+                        </div>
+                </div>
+                <div class="banner-circle">
+                    <span class="banner-txtP">Mejor precio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-sellers-prd">
+        <div class="div-sellers-prd">
+            <div class="sellers-product">
+                <div class="sellers-div-main">
+                    <h3 class="sellers-title">Oferta</h3>
+                </div>
+                <div class="prod-six-view">
+                    {% include 'store/layout/list-product/list-6-offer.html'%}
+                </div>
+                <div class="prod-action">
+                    <a class="btn-view-prod" href="{% url 'comprar-todo' %}">
+                        <span class="txt-btn">Ver todo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-banner-offer">
+        <div class="div-banner-offer">
+            <div class="inside-content-offer" id="fond-offer-2">
+                <div class="banner-figure-2"></div>
+                <div class="banner-body" id="banner-bd-2">
+                        <div class="div-descrip-offer">
+                            <span class="tag-special">Especial del día</span>
+                            <span class="txt-banner">La mejor vista de la ciudad</span>
+                            <h1 class="tit-banner"><span class="porcent-banner">30%</span>DTO</h1>
+                            <span class="txt-banner">en drones profesionales</span>
+                            <span class="txt-banner-mm">Cantidades limitadas.</span>
+                            <span class="txt-banner-mm">Disponibilidad en la página del producto.</span>
+                        </div>
+                        <div class="div-act-store">
+                            <a class="btn-store" href="">
+                                <span class="txt-btn">Tienda</span>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-brands">
+        <div class="div-brands">
+            <div class="inside-content-brands">
+                <h3 class="title-brand">Marcas</h3>
+                <ul class="ul-brands">
+                    <li class="list-brands">
+                        <img src="{% static 'img/img-brands/zodiac.png' %}" alt="brand_zodiac">
+                    </li>
+                    <li class="list-brands">
+                        <img src="{% static 'img/img-brands/zoro.png' %}" alt="brand_zoro">
+                    </li>
+                    <li class="list-brands">
+                        <img src="{% static 'img/img-brands/pik.png' %}" alt="brand_pik">
+                    </li>
+                    <li class="list-brands">
+                        <img src="{% static 'img/img-brands/gxl.png' %}" alt="brand_gxl">
+                    </li>
+                    <li class="list-brands">
+                        <img src="{% static 'img/img-brands/horizon.png' %}" alt="brand_horizon">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="sec-informative">
+        <div class="div-informative">
+            <div class="inside-content-informative">
+                <h3 class="title-informative">Boletín informativo</h3>
+                <p class="p-informative">Suscríbete y recibe noticias sobre novedades y ofertas especiales</p>
+                {% include 'store/layout/partials/informative-form.html' %}
+            </div>
+        </div>
+    </section>
+    {% include 'store/layout/partials/sec-help.html' %}
+{% endblock %}

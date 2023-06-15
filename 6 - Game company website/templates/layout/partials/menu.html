@@ -1,0 +1,21 @@
+<nav class="navbar" id="nav-pag">
+    <div class="nav-main">
+        <div class="btn-logo">
+            <a href="{{ url_for('index') }}" class="txt-logo">Juegos Space</a>
+        </div>
+        <ul class="nav-ul">
+                <a class="link-li active-menu" href="{{ url_for('index') }}"><li class="li-nav"><span class="txt-li">Inicio</span></li></a>
+                <button class="link-li btn-menu dropbtn" id="btn-dropdown">
+                    <span class="txt-btn">Juegos</span>
+                </button>
+                <a class="link-li" href="{{ url_for('empleos') }}"><li class="li-nav"><span class="txt-li">Empleos</span></li></a>
+                <a class="link-li" href="{{ url_for('about') }}"><li class="li-nav"><span class="txt-li">Acerca de</span></li></a>
+                <a class="link-li" href="{{ url_for('index') }}#Contact-Space"><li class="li-nav"><span class="txt-li">Contacto</span></li></a>
+        </ul>
+        <div class="dropdown-content">
+            <a class="link-menu" href="{{ url_for('sniper_fury') }}">Sniper Fury</a>
+            <a class="link-menu" href="{{ url_for('call_of_duty') }}">Call of duty: Mobile</a>
+            <a class="link-menu" href="{{ url_for('asphalt_9') }}">Asphalt 9: Legends</a>
+        </div>
+    </div>
+</nav>

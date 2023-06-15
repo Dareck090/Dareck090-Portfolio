@@ -1,0 +1,200 @@
+{% extends "./layout/layout.html" %}
+
+{% block title %}Juegos Space{% endblock %}
+
+{% block content %}
+
+<section class="th-div-pag">
+    <div class="section-main">
+        <div class="title-div">
+            <h1 class="title-th">Creado para jugar</h1>
+        </div>
+        <div class="parragraph-div">
+            <p class="pghp-th">Lo mejor en juegos moviles</p>
+        </div>
+        <div class="store-play-div">
+            <img class="img-play" src="{{ url_for('static', filename='img/store_ios.PNG') }}" alt="app_store_ios">
+            <img class="img-play" src="{{ url_for('static', filename='img/play_store.PNG') }}" alt="google_play_store">
+        </div>
+    </div>
+</section>
+<section class="comp-games">
+    <div class="comp-games-item">
+        <a href="{{ url_for('sniper_fury') }}">
+            <div class="item-game">
+                <img id="item-gm" src="{{url_for('static',filename='/img/sniper-fury.jpg')}}" alt="">
+                <div class="game-reference">
+                    <span class="title-game">Sniper Fury</span>
+                    <span class="category-game">Shooter - Primera persona</span>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('call_of_duty') }}">
+            <div class="item-game">
+                <img id="item-gm" src="{{url_for('static',filename='/img/game-codm.jpg')}}" alt="">
+                <div class="game-reference">
+                    <span class="title-game">Call of duty mobile</span>
+                    <span class="category-game">Shooter - Multijugador</span>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('asphalt_9') }}">
+            <div class="item-game">
+                <img id="item-gm" src="{{url_for('static',filename='/img/asphalt_font1.jpg')}}" alt="">
+                <div class="game-reference">
+                    <span class="title-game">Resident evil village</span>
+                    <span class="category-game">Video juego survival horror</span>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('index') }}#games">
+            <div class="item-game" id="item-gm-4">
+                <div class="game-reference">
+                    <div class="div-explore">
+                        <span class="explore-game">Explora los juegos</span>
+                    <i class="bi bi-arrow-down icon-explore"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+<section class="rs-about">
+    <div class="rs-about-div">
+        <div class="rs-about-descrip">
+            <span class="rs-span">Acerca de Juegos Space</span>
+            <h1 class="rs-title">Tu fuente de diversion movil</h1>
+            <p class="rs-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. En este espacio puedes contar tu historia y permitir que los usuarios sepan más sobre ti.</p>
+            <div class="rs-button-div">
+                <button class="btn btn-info"><span class="txt-full">Mas información</span></button>
+            </div>
+        </div>
+        <div class="rs-about-pp-img">
+        </div>
+        <div class="rs-img-type">
+            <img class="img-type" src="{{ url_for('static', filename='img/codm-jcg.png') }}" alt="">
+        </div>
+    </div>
+</section>
+<section class="vlw-games-space" id="games">
+    <div class="vlw-div-space">
+        <div class="vlw-ref-space">
+            <h1 class="vlw-title">Nuestros juegos</h1>
+            <p class="vlw-context">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+        </div>
+        <div class="vlw-games-item">
+            <div class="vlm-item-gm" id="vlw-gm-1">
+                <div class="vlw-img-games">
+                    <img src="{{ url_for('static', filename='img/sniper-fury.jpg') }}" alt="sniper-fury">
+                    <div class="vlw-descrip-gm">
+                        <span class="vlw-title-gm">Sniper Fury</span>
+                        <span class="vlw-tag-gm">Casual - accion</span>
+                    </div>
+                </div>
+                <div class="vlw-gm-context">
+                    <p  class="vlw-paragraph-it">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+                <div class="vlw-gm-store">
+                    <img src="{{ url_for('static', filename='img/store_ios.PNG')}}" alt="store_ios">
+                    <img src="{{ url_for('static', filename='img/play_store.PNG')}}" alt="play_store">
+                </div>
+            </div>
+            <div class="vlm-item-gm" id="vlw-gm-2">
+                <div class="vlw-img-games">
+                    <img src="{{ url_for('static', filename='img/game-codm.jpg') }}" alt="call_of_duty">
+                    <div class="vlw-descrip-gm">
+                        <span class="vlw-title-gm">Call of duty: Mobile</span>
+                        <span class="vlw-tag-gm">Casual - Battle Royale</span>
+                    </div>
+                </div>
+                <div class="vlw-gm-context">
+                    <p  class="vlw-paragraph-it">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+                <div class="vlw-gm-store">
+                    <img src="{{ url_for('static', filename='img/store_ios.PNG')}}" alt="store_ios">
+                    <img src="{{ url_for('static', filename='img/play_store.PNG')}}" alt="play_store">
+                </div>
+            </div>
+            <div class="vlm-item-gm" id="vlw-gm-3">
+                <div class="vlw-img-games">
+                    <img src="{{ url_for('static', filename='img/asphalt_font1.jpg') }}" alt="">
+                    <div class="vlw-descrip-gm">
+                        <span class="vlw-title-gm">Asphalt 9: Legends</span>
+                        <span class="vlw-tag-gm">Casual - Carreras</span>
+                    </div>
+                </div>
+                <div class="vlw-gm-context">
+                    <p  class="vlw-paragraph-it">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+                <div class="vlw-gm-store">
+                    <img src="{{ url_for('static', filename='img/store_ios.PNG')}}" alt="store_ios">
+                    <img src="{{ url_for('static', filename='img/play_store.PNG')}}" alt="play_store">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mbl-contact-space">
+    <div class="mbl-div-space" id="mb-part-sect1">
+        <div class="mbl-div-lim" id="mbl-item1">
+            <span class="mbl-txt">Unete al equipo</span>
+            <h1 class="mbl-title-gm">Para cambiar el juego hace falta el mejor talento del mundo.</h1>
+            <button class="btn btn-employes">
+                <span class="txt-full">Explora los empleos</span>
+            </button>
+        </div>
+        <div class="mbl-div-lim" id="mbl-item2">
+            <img class="img-mbl-contact" src="{{url_for('static', filename='img/codm-ops.png')}}" alt="game-img">
+        </div>
+    </div>
+    <div class="mbl-div-space" id="mb-part-sect2">
+        <div class="mbl-div-form" id="mbl-item3">
+            <form action="" class="form-contact" id="Contact-Space">
+                <h3 class="form-title">Contáctanos</h3>
+                <p class="form-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editar.</p>
+                <div class="form-all-contact" id="part-form-1">
+                    <div class="form-dw-fm">
+                        <label class="label-txt" for="">Nombre*</label>
+                        <input class="input-form" type="text">
+                    </div>
+                    <div class="form-dw-fm">
+                        <label class="label-txt" for="">Apellido*</label>
+                        <input class="input-form" type="text">
+                    </div>
+                </div>
+                <div class="form-all-contact" id="part-form-1">
+                    <div class="form-dw-fm">
+                        <label class="label-txt" for="email">Email*</label>
+                        <input class="input-form-email" type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="form-all-contact" id="part-form-1">
+                    <div class="form-dw-fm">
+                        <label class="label-txt" for="textarea">Déjanos un mensaje...</label>
+                        <textarea class="input-form-textarea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="form-all-submit">
+                    <button class="btn btn-submit">
+                        <span class="txt-submit">Enviar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="mbl-div-form" id="mbl-item4">
+            <form action="" class="form-contact-sbp">
+                <h3 class="title-form-rv">Suscríbete a nuestro boletín</h3>
+                <div class="form-contact-email">
+                    <label class="label-txt" for="email">Email*</label>
+                    <div class="input-form-sbp">
+                        <input class="input-fm-email" type="email" name="email" id="email">
+                        <button class="btn btn-unete" type="button">
+                            <span class="txt-full">Únete</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

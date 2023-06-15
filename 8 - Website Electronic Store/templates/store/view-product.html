@@ -1,0 +1,100 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} {{ product.product_name }} {% endblock %}
+
+{% block 'content' %}
+<section class="sec-view-product">
+    <article class="article-product">
+        <div class="options-navigate-prd">
+            <div class="navigate-optBack">
+                <a class="goBack-link" href="{% url 'index' %}">Inicio /</a>
+                <a class="goBack-link" href="{% url 'comprar-todo' %}">Comprar Todos /</a>
+                <span class="name-prod-list">{{product.product_name}}</span>
+            </div>
+            <div class="prev-next-prod">
+                {% if prev_product %}
+                    <a href="{% url 'product_view' slug=prev_product.slug %}" class="prev-button prevBack">Previo</a>
+                {% else %}
+                    <span class="prev-button disabled">Previo</span>
+                {% endif %}
+                |
+                {% if next_product %}
+                    <a href="{% url 'product_view' slug=next_product.slug %}" class="next-button nextBtn">Próximo</a>
+                {% else %}
+                    <span class="next-button disabled">Próximo</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="product-main-view">
+            <div class="image-div-product">
+                <div class="div-image-slc">
+                    <img class="img-prd" src="{{ product.product_image.url }}" width="300px" height="300px" alt="Imagen del producto">
+                </div>
+                <div class="descrip-clm-prd">
+                    <p class="p-clm-text">Descripción del producto. Lugar ideal para "vender" tu producto y captar la atención del comprador. Describe tu producto de forma clara y precisa. Usa palabras únicas. Escribe tu propia descripción en vez de usar la del fabricante.</p>
+                </div>
+            </div>
+            <div class="details-product">
+                <h4 class="title-product">{{ product.product_name }}</h4>
+                <span class="text-sm-prod">SKU: {{ product.product_code }}</span>
+                <span class="text-sm-prod-dis">Disponibles: {{ product.product_stock }}!</span>
+                <div class="price-div">
+                    {% if offer and offer.is_product_on_sale %}
+                        <p class="txt-price-ls"><span class="txt-price-ls line-price">{{ product.product_price }}$</span> {{ offer.product_total_offer }}$</p>
+                    {% else %}
+                        <p class="txt-price-ls">{{ product.product_price }}$</p>
+                    {% endif %}
+                </div>
+                <div class="stock-prod">
+                    <span class="text-sm-prod-stock">Cantidad</span>
+                    <input class="input-stock" type="number" min="1" max="{{ product.product_stock }}" value="1">
+                </div>
+                <div class="actions-buy-div">
+                    <div class="add-car-div">
+                        <button class="btn-add-shop">
+                            <span class="txt-btn">Agregar al carrito</span>
+                        </button>
+                        <button class="btn-favorite-prd bi bi-heart">
+                        </button>
+                    </div>
+                    <div class="purcharse-div">
+                        <button class="btn-purcharse">
+                            <span class="txt-btn">Realizar compra</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="view-details-all">
+                    <div class="div-main-lgm">
+                        <button class="btn-preview-info" id="btn-info-prd">Informacion del producto<span class="txt-sign" id="openFilterProd"></span>
+                        </button>
+                        <div class="info-lgm-prod">
+                            <p class="info-text-lgm">{{ product.product_description}}</p>
+                        </div>
+                    </div>
+                    <div class="line-div-info"></div>
+                    <div class="div-main-lgm">
+                        <button class="btn-preview-info" id="btn-info-plt">Política de devolución y reembolso<span class="txt-sign" id="openFilterProd2"></span>
+                        </button>
+                        <div class="info-lgm-politic">
+                            <p class="info-text-lgm">Política de devolución y reembolso. Lugar ideal para explicar a tus clientes qué hacer si no están satisfechos con su compra. Tener una política de reembolso o cambio clara es una gran manera de generar confianza y garantizar que tus clientes compren con seguridad.</p>
+                        </div>
+                    </div>
+                    <div class="line-div-info"></div>
+                    <div class="div-main-lgm">
+                        <button class="btn-preview-info" id="btn-send-legal">Informacion de envio<span class="txt-sign" id="openFilterProd3"></span>
+                        </button>
+                        <div class="info-lgm-send-legal">
+                            <p class="info-text-lgm">Política de devolución y reembolso. Lugar ideal para explicar a tus clientes qué hacer si no están satisfechos con su compra. Tener una política de reembolso o cambio clara es una gran manera de generar confianza y garantizar que tus clientes compren con seguridad.</p>
+                        </div>
+                    </div>
+                    <div class="line-div-info"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<section class="sec-recomend-product">
+
+</section>
+{% include 'store/layout/partials/sec-help.html' %}
+{% endblock %}

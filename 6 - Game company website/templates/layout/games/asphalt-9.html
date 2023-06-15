@@ -1,0 +1,91 @@
+{% extends "./layout/layout.html" %}
+{% block content %}
+
+<section class="space-divgame">
+</section>
+<section class="game-section-spml" id="spml-game3">
+    <div class="div-game-spml">
+        <div class="item-game-spml">
+            <div class="img-div-spml">
+                <img src="{{ url_for('static', filename='img/asphalt9-logo.png') }}" alt="">
+                <div class="descrip-spml-gm">
+                    <h3 class="spml-title-gm">Aspahalt 9: Legends</h3>
+                    <span class="spml-paragraph-gm">Casual - carreras</span>
+                </div>
+            </div>
+            <h1 class="spml-title">Un juego único que ofrece un sinfín de emociones al alcance de tu mano.</h1>
+            <p class="spml-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. En este espacio puedes contar tu historia y permitir que los usuarios sepan más sobre ti.</p>
+        </div>
+    </div>
+</section>
+<section class="images-games-dlsm">
+    <div class="div-games-dlsm">
+        <h1 class="dlsm-title">Imágenes</h1>
+        <div class="slide-game-dlsm">
+            <div class="dlsm-img">
+                <img src="{{ url_for('static', filename='img/asphalt9_game1.jpg')}}" alt="asphalt-game">
+            </div>
+            <div class="dlsm-img">
+                <img src="{{ url_for('static', filename='img/asphalt9_game2.jpg')}}" alt="asphalt-game">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews-game-rvw">
+    <div class="div-reviews-rvw">
+        <div class="head-reviews">
+            <div class="content-points-main">
+                <div class="points-game">
+                    <i class="icon-rvw bi bi-star-fill"></i>
+                    <span class="points-rvw">4.5 Puntos</span>
+                </div>
+            </div>
+            <h1 class="head-rvw-title">Reseñas</h1>
+        </div>
+        <div class="reviews-item-main">
+            <div class="item-rvw">
+                <div class="content-rvw">
+                    <p class="itm-rvw-p">"Testimonio. Haz clic aquí para editar y agrega texto que diga algo bueno sobre ti y tus servicios."</p>
+                    <h4 class="itm-rvw-people">Leo Orozco</h4>
+                </div>
+            </div>
+            <div class="item-rvw">
+                <div class="content-rvw">
+                    <p class="itm-rvw-p">
+                        
+“Testimonio. Haz clic para editar y escribir algo bueno sobre ti y tus servicios. Deja que tus clientes te evalúen y les cuenten a sus amigos lo genial que eres.”</p>
+                    <h4 class="itm-rvw-people">Sofía Romo</h4>
+                </div>
+            </div>
+            <div class="item-rvw">
+                <div class="content-rvw">
+                    <p class="itm-rvw-p">
+                        "Testimonio. Haz clic aquí para editar y agrega texto que diga algo bueno sobre ti y tus servicios."</p>
+                    <h4 class="itm-rvw-people">Carlos M</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner-game-bnr" id="banner-game3">
+    <div class="div-banner-bnr">
+        <div class="bnr-descrip-div">
+            <h1 class="bnr-title">Desafía a un amigo o juega una carrera contra el reloj a través de 20 niveles de diversión sin fin</h1>
+            <p class="bnr-ph">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Solo haz clic en Editar texto o doble clic aquí para agregar tu propio contenido y hacer cambios en la fuente. Es un lugar ideal para contar una historia y permitir que los usuarios sepan más sobre ti.</p>
+        </div>
+    </div>
+</section>
+<section class="playGame-sec-plyg">
+    <div class="div-playGame">
+        <div class="div-plyg">
+            <h1 class="plyg-title">Juega Ahora</h1>
+            <div class="plyg-app">
+                <a class="link-plyg" href="#"><img src="{{ url_for('static', filename='img/store_ios.PNG')}}" alt="store_ios"></a>
+                <a class="link-plyg" href="#"><img src="{{ url_for('static', filename='img/play_store.PNG')}}" alt="play_store"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

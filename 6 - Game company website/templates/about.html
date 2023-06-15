@@ -1,0 +1,111 @@
+{% extends "./layout/layout.html" %}
+{% block content %}
+
+<section class="sec-about-space">
+    <div class="div-about-pml">
+        <div class="part-ls-content">
+            <span class="pml-subtle">Somos SpaceGame</span>
+            <h1 class="pml-title-rx">Creamos el mejor entretenimiento interactivo con juegos que cambian la diversión.</h1>
+        </div>
+    </div>
+</section>
+<section class="sec-about-descrip">
+    <div class="sec-abt-main">
+        <div class="img-about-abt"></div>
+        <div class="abt-div-content">
+            <div class="context-abt">
+                <p class="abt-pp">Párrafo. Haz clic aquí para añadir tu texto y editarlo. Es fácil. Solo debes hacer clic en "Editar texto" o doble clic aquí para añadir tu propio contenido y cambiar la fuente. Puedes arrastrarlo y soltarlo donde quieras en la página. Es un gran lugar para que cuentes una historia y dejes que los usuarios te conozcan un poco más.</p>
+                <p class="abt-pp">
+                    Es un lugar ideal para escribir un texto largo sobre tu empresa y servicios. Puedes usar este espacio para
+                    entrar en más detalle sobre tu empresa. Habla de tu equipo y de los servicios que prestas.
+                    Cuenta a tus visitantes la historia de cómo se te ocurrió la idea de tu negocio y qué lo hace diferente de la competencia. Haz que tu empresa se destaque y muestra a tus visitantes quién eres.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="to-about-space">
+    <div class="main-div-fxl">
+        <div class="jl-main-item">
+            <div class="div-fxl-rm1">
+                <h1 class="do-title-fx">Qué hacemos</h1>
+            </div>
+            <div class="div-fxl-rm2">
+                <div class="item-fxl-main">
+                    <h3 class="fxl-title">Logros</h3>
+                    <p class="fxl-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+                <div class="item-fxl-main">
+                    <h3 class="fxl-title">Creatividad</h3>
+                    <p class="fxl-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+            </div>
+            <div class="div-fxl-rm3">
+                <div class="item-fxl-2">
+                    <h3 class="fxl-title">Comunidad</h3>
+                    <p class="fxl-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-members-abt">
+    <div class="div-members-abt">
+        <div class="mrb-abt-1">
+            <h1 class="title-mrb">Nuestros fundadores</h1>
+        </div>
+        <div class="members-all-div">
+            <div class="item-fix-mbrs">
+                <img class="img-members" src="{{ url_for('static', filename='img/daisy.jpg') }}">
+                <div class="dsc-mbrs">
+                    <h4 class="title-mrbs">Daisy Suarez</h4>
+                    <span class="post-mrbs">Directora de tecnologia</span>
+                </div>
+            </div>
+            <div class="item-fix-mbrs">
+                <img class="img-members" src="{{ url_for('static', filename='img/ray-casas.jpg') }}">
+                <div class="dsc-mbrs">
+                    <h4 class="title-mrbs">Ray Casas</h4>
+                <span class="post-mrbs">Desarrollador de jeugos ejecutivo</span>
+                </div>
+            </div>
+            <div class="item-fix-mbrs">
+                <img class="img-members" src="{{ url_for('static', filename='img/santana.jpg') }}">
+                <div class="dsc-mbrs">
+                    <h4 class="title-mrbs">Leo Santana</h4>
+                <span class="post-mrbs">Diseñador de juegos ejecutivo</span>
+                </div>
+            </div>
+            <div class="item-fix-mbrs">
+                <img class="img-members" src="{{ url_for('static', filename='img/raul-prado.jpg') }}">
+                <div class="dsc-mbrs">
+                    <h4 class="title-mrbs">Raúl Prado</h4>
+                <span class="post-mrbs">Desarrollador de juegos ejecutivo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-location-office">
+    <div class="div-lct-office">
+        <div class="lct-main-1">
+            <span class="lct-ref">Nuestras oficinas</span>
+            <h1 class="lct-title">Nuestro estudio en guadalajara</h1>
+            <p class="lct-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. En este espacio puedes contar tu historia y permitir que los usuarios sepan más sobre ti.</p>
+        </div>
+        <div class="lct-main-2">
+            <div class="lct-div-cont">
+                <img src="{{url_for('static', filename='img/codm-ops.png')}}" alt="">
+                <div class="space-line"></div>
+                <h3 class="lct-title-wrk">Nos gustaría trabajar contigo</h3>
+                <p class="lct-paragraph-wrk">
+                    Párrafo. Haz clic aquí para agregar tu texto y editar. Permite que tus usuarios te conozcan.
+                </p>
+                <button class="btn btn-chance">
+                    <span class="txt-full">Explora oportunidades</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} {{ category }} {% endblock%}
+
+{% block 'content' %}
+
+    <section class="pag-sec">
+        <div class="div-main-pag">
+            <h1 class="title-pag-nav">{{ category }}</h1>
+        </div>
+    </section>
+    <section class="all-content">
+        <div class="div-all-product-main">
+            <div class="aside-content">
+                <div class="aside-prd">
+                    <div class="div-filter">
+                        <h1 class="txt-filter">Filtrar por</h1>
+                    </div>
+                    <div class="line-div"></div>
+                    <div class="div-more">
+                        <button type="button" class="btn-category" id="btnCategoryFilter">{{ category }}<span class="txt-sign" id="openFilter"></span></button>
+                        {% include 'store/layout/filter-product/filter_url_category.html'%}
+                    </div>
+                    <div class="line-div"></div>
+                    <div class="div-more">
+                        <button type="button" class="btn-price" id="btnPriceFilter">Precio<span class="txt-sign" id="openFilter2"></span></button>
+                        {% include 'store/layout/filter-product/range-filter.html'%}
+                    </div>
+                    <div class="line-div"></div>
+                </div>
+            </div>
+            <div class="sec-products">
+                <div class="div-order-prd">
+                    {% include 'store/layout/filter-product/order-product.html' %}
+                </div>
+                <div class="div-products">
+                    {% include 'store/layout/list-product/list_by_category.html' %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

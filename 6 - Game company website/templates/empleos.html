@@ -1,0 +1,78 @@
+{% extends "./layout/layout.html" %}
+{% block content %}
+
+<section class="employes-space">
+    <div class="div-employes">
+        <div class="employes-content-ls">
+            <span class="xlv-subtitle">Ayúdanos a cambiar la forma de jugar</span>
+            <h1 class="xlv-title">Vacantes abiertas</h1>
+            <p class="xlv-paragraph">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. En este espacio puedes contar tu historia y permitir que los usuarios sepan más sobre ti.</p>
+        </div>
+    </div>
+</section>
+<section class="offers-main">
+    <div class="div-offers">
+        <div class="ofrx-div-tlt">
+            <h1 class="ofrx-title">Ofertas de empleo</h1>
+        </div>
+        <div class="offers-item-main">
+            <div class="item-offers">
+                <img class="img-offers" src="{{ url_for('static', filename='img/gestion-redes-sociales.png') }}" >
+                <div class="offers-post">
+                    <h3 class="ff-title">Gestor de redes sociales</h3>
+                    <span class="ff-location">Guadalajara, Jal.</span>
+                    <p class="ff-description">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                    <button class="btn btn-aplica">
+                        <span class="txt-full">Aplica</span>
+                    </button>
+                </div>
+            </div>
+            <div class="item-offers">
+                <img class="img-offers" src="{{ url_for('static', filename='img/evaluador-qa.png') }}" >
+                <div class="offers-post">
+                    <h3 class="ff-title">Evaluador QA</h3>
+                    <span class="ff-location">Guadalajara, Jal.</span>
+                    <p class="ff-description">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                    <button class="btn btn-aplica">
+                        <span class="txt-full">Aplica</span>
+                    </button>
+                </div>
+            </div>
+            <div class="item-offers">
+                <img class="img-offers" src="{{ url_for('static', filename='img/diseñador-gm.png') }}" >
+                <div class="offers-post">
+                    <h3 class="ff-title">Diseñador de juegos</h3>
+                    <span class="ff-location">Guadalajara, Jal.</span>
+                    <p class="ff-description">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                    <button class="btn btn-aplica">
+                        <span class="txt-full">Aplica</span>
+                    </button>
+                </div>
+            </div>
+            <div class="item-offers">
+                <img class="img-offers" src="{{ url_for('static', filename='img/programador-gm.png') }}" >
+                <div class="offers-post">
+                    <h3 class="ff-title">Programador</h3>
+                    <span class="ff-location">Guadalajara, Jal.</span>
+                    <p class="ff-description">Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                    <button class="btn btn-aplica">
+                        <span class="txt-full">Aplica</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cv-offers-main">
+    <div class="div-cv-offers">
+        <div class="div-cv-part">
+            <span class="span-txt">¿No encontraste el puesto que buscabas?</span>
+            <h1 class="cv-title">Envíanos tu CV</h1>
+            <button class="btn btn-now-apply">
+                <span class="txt-full">Aplica ahora</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

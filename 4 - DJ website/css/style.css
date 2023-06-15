@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+.btn-full {
+  padding: 1.2rem 3.4rem;
+  font-size: 1rem;
+  background-color: rgba(173, 75, 230, 0.938);
+  color: black;
+  border: none;
+  font-weight: 100;
+}
+.btn-full:hover {
+  transition: ease 0.5s;
+  background-color: transparent;
+  color: white;
+  border: solid 1px white;
+}
+
+.main-menu {
+  margin-bottom: 0;
+  display: flex;
+}
+.main-menu li {
+  color: white;
+  display: flex;
+  border: solid 1px white;
+  border-right: none;
+  background-color: transparent;
+}
+.main-menu li a {
+  padding: 0.5rem 2.6rem;
+}
+.main-menu li:hover {
+  transition: ease 0.4s;
+  background-color: rgb(14, 13, 13);
+}
+.main-menu li a {
+  text-decoration: none;
+  color: white;
+}
+.main-menu li:last-child {
+  border-right: solid 1px white;
+}
+
+.name-dj {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.name-dj:hover {
+  color: white;
+}
+
+.beat-show {
+  margin-bottom: 4rem;
+}
+
+.list-group {
+  border: 1px solid white;
+  border-radius: 1px 1px 1px 1px;
+  background-color: transparent;
+}
+.list-group h5 {
+  width: 5%;
+  color: white;
+  font-weight: 700;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.space {
+  margin: 0rem 2rem 2rem 2rem;
+}
+
+.list-group-item {
+  width: 53rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  border-top: 1px solid rgb(107, 105, 105);
+  border-bottom: 1px solid rgb(107, 105, 105);
+}
+.list-group-item .icon {
+  color: white;
+  font-size: 1.9rem;
+  border-radius: 0.1rem;
+  border: 1px solid white;
+  padding: 0rem 0.2rem 0rem 0.4rem;
+}
+.list-group-item .icon-sm {
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  left: 40rem;
+}
+.list-group-item span {
+  color: white;
+}
+.list-group-item:hover .icon {
+  color: rgba(173, 75, 230, 0.938);
+}
+.list-group-item:hover .icon-sm {
+  color: rgba(173, 75, 230, 0.938);
+}
+.list-group-item:hover span {
+  color: rgba(173, 75, 230, 0.938);
+}
+
+.pag-prod {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+  display: none;
+  transition: 0.5s;
+}
+.pag-prod .music-prod {
+  width: 50%;
+  background-image: url(../img/fondo-music.jpg);
+  background-repeat: no-repeat;
+  background-size: 80rem;
+  background-position: center;
+}
+.pag-prod .music-prod .goSite {
+  position: fixed;
+}
+.pag-prod .music-prod .goSite #btn-go {
+  padding: 0.2rem 1.2rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 100;
+}
+.pag-prod .music-prod .goSite #btn-go:hover {
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: ease 0.5s;
+}
+.pag-prod .music-prod .controls-song {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pag-prod .music-prod .controls-song .controls {
+  display: flex;
+}
+.pag-prod .music-prod .controls-song .controls .prev {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.pag-prod .music-prod .controls-song .controls .prev i {
+  color: white;
+  font-size: 2rem;
+}
+.pag-prod .music-prod .controls-song .controls .prev i:hover {
+  transition: ease 0.4s;
+  color: rgba(173, 75, 230, 0.938);
+}
+.pag-prod .music-prod .controls-song .controls .play {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.pag-prod .music-prod .controls-song .controls .play i {
+  color: white;
+  font-size: 2rem;
+}
+.pag-prod .music-prod .controls-song .controls .play i:hover {
+  transition: ease 0.4s;
+  color: rgba(173, 75, 230, 0.938);
+}
+.pag-prod .music-prod .controls-song .controls .play i {
+  font-size: 3rem;
+}
+.pag-prod .music-prod .controls-song .controls .next {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.pag-prod .music-prod .controls-song .controls .next i {
+  color: white;
+  font-size: 2rem;
+}
+.pag-prod .music-prod .controls-song .controls .next i:hover {
+  transition: ease 0.4s;
+  color: rgba(173, 75, 230, 0.938);
+}
+.pag-prod .music-prod .controls-song .duration-song {
+  color: white;
+}
+.pag-prod .reference-dj {
+  width: 50%;
+  color: black;
+}
+.pag-prod .reference-dj .btn-my {
+  position: fixed;
+  margin: 1rem;
+  right: 0%;
+}
+.pag-prod .reference-dj .header-dj {
+  margin: 4rem 4rem 0rem 4rem;
+}
+.pag-prod .reference-dj .header-dj .title-song {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+}
+.pag-prod .reference-dj .header-dj span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pag-prod .reference-dj .btn {
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.pag-prod .reference-dj .dropdown {
+  margin-left: 3rem;
+  position: absolute;
+  display: flex;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: auto;
+  z-index: 1;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-fb {
+  padding: 12px 0px 0px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  display: block;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-fb i {
+  font-size: 1.4rem;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-fb i:hover {
+  transition: ease 0.4s;
+  filter: opacity(50%);
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-wp {
+  padding: 12px 0px 0px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  display: block;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-wp i {
+  font-size: 1.4rem;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-wp i:hover {
+  transition: ease 0.4s;
+  filter: opacity(50%);
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-tt {
+  padding: 12px 0px 0px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  display: block;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-tt i {
+  font-size: 1.4rem;
+}
+.pag-prod .reference-dj .dropdown .dropdown-content #btn-tt i:hover {
+  transition: ease 0.4s;
+  filter: opacity(50%);
+}
+.pag-prod .reference-dj .dropdown:hover .dropdown-content {
+  display: flex;
+}
+.pag-prod .reference-dj .body-ms {
+  text-align: justify;
+  margin: 4rem 4rem;
+}
+.pag-prod .reference-dj .body-ms .separator-line {
+  width: 100%;
+  border-bottom: solid 1px rgb(172, 168, 168);
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-full {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-one {
+  width: 100%;
+  background-image: url(../img/fondo-music.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-menu {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-menu .logo img {
+  width: 80px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+.nav-menu .logo a {
+  color: white;
+  font-weight: 900;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.wid-perfil {
+  width: 95%;
+  margin: 8rem 0 10rem 0;
+  text-align: left;
+}
+.wid-perfil .sale {
+  width: 35%;
+  margin-left: 19rem;
+}
+.wid-perfil .sale h1 {
+  font-weight: 600;
+  font-size: 5.5rem;
+  color: white;
+}
+.wid-perfil .sale ul {
+  padding-left: 0%;
+}
+.wid-perfil .sale ul .list {
+  color: white;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.wid-perfil .sale .iconP {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.social-wid {
+  position: fixed;
+  width: 95%;
+  margin-top: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+.social-wid ul li {
+  list-style: none;
+}
+.social-wid ul li a {
+  color: white;
+  font-size: 1.2rem;
+}
+.social-wid ul li a:hover {
+  color: rgb(216, 208, 208);
+}
+
+.producerInfo {
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.producerInfo .headinf {
+  margin-top: 5.5rem;
+  width: 32%;
+  margin-left: 21rem;
+}
+.producerInfo .headinf h1 {
+  font-size: 3.2rem;
+  color: white;
+  font-weight: 700;
+}
+.producerInfo .headinf h1 .prod {
+  color: rgba(173, 75, 230, 0.938);
+}
+.producerInfo .partfix {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.producerInfo .partfix .animationGif {
+  width: 30%;
+}
+.producerInfo .partfix .animationGif img {
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+.producerInfo .partfix .inf-more {
+  width: 20%;
+}
+.producerInfo .partfix .inf-more p {
+  text-align: left;
+  font-weight: 100;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.fond-dj {
+  width: 100%;
+  padding: 22rem 0 10rem 0;
+  background-image: url(../img/fondo-menu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0rem;
+}
+
+.dj-referenceM {
+  background-image: url(../img/fondo-principal.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.dj-referenceM h1 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.dj-referenceM p {
+  margin-bottom: 2rem;
+}
+
+.form-dj {
+  background-image: url(../img/dj-control.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-bottom: 3rem;
+}
+.form-dj .head-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0rem 1.4rem 0rem;
+}
+.form-dj .head-form h1 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  margin-bottom: 1.4rem;
+}
+.form-dj .head-form p {
+  width: 50%;
+  text-align: center;
+}
+
+.mh-form {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.mh-form .lb-form {
+  font-size: 0.8rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+.mh-form .tb-form .fl-input {
+  width: 100%;
+  position: relative;
+}
+.mh-form .tb-form .fl-input input {
+  outline: none;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  width: 15rem;
+  background-color: rgba(0, 0, 0, 0.377);
+  padding: 0.5rem;
+}
+.mh-form .tb-form .fl-input input:focus {
+  background-color: rgba(22, 22, 22, 0.747);
+}
+.mh-form .tb-form .fl-input .text-ms {
+  outline: none;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.377);
+  border: 1px solid white;
+  width: 30rem;
+}
+.mh-form .tb-form .fl-input .text-ms:focus {
+  background-color: rgba(22, 22, 22, 0.747);
+}
+.mh-form .tb-form .fl-submit {
+  margin-top: 1.5rem;
+}
+.mh-form .tb-form .fl-submit #btn-submit {
+  color: rgb(0, 0, 0);
+  background-color: rgb(169, 82, 255);
+  border: none;
+  padding: 0.9rem 2.7rem 0.9rem 2.7rem;
+  font-size: 0.8rem;
+}
+.mh-form .tb-form .fl-submit #btn-submit:hover {
+  background: rgb(233, 225, 241);
+  transition: ease 0.45s;
+}
+
+.pg-footer {
+  background-color: rgb(8, 8, 8);
+  width: 100%;
+  padding: 0.6rem 0.5rem 0rem 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pg-footer p {
+  font-size: 0.8rem;
+}
+
+.offcanvas {
+  padding: 12rem;
+}
+
+/*# sourceMappingURL=style.css.map */

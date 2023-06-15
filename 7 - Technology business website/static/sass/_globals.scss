@@ -1,0 +1,1126 @@
+@use "components";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+.content-full{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+h1,h2,h3.h4.h5,h6,a,p{
+    font-family: 'Poppins', sans-serif;
+}
+//************** CSS SYTLE INICIO **************
+//Section principal
+.sec-first{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("../img/font-def.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .rm-first{
+        width: auto;
+        height: 75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+        margin-top: 9rem;
+        padding-left: 4rem;
+        .rm-head{
+            width: 62%;
+            .rm-thead{
+                font-size: 5.5rem;
+                font-weight: 400;
+            }
+        }
+        .rm-context{
+            width: 35%;
+            .rm-tdcontext{
+                font-size: 2rem;
+            }
+        }
+        .rm-btn{
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+//secction statistics
+.sec-statistics{
+    background-color: components.$color-pag;
+    width: 100%;
+    height: 41.5rem;
+    position: relative;
+    .st-padded{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid components.$color-pag-gris;
+        margin: 0rem 4.5rem;
+        position: relative;
+        top: -6rem;
+        .st-part-main{
+            background-image: url("../img/fondo-dark-abstrac.png");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size:cover;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            padding: 0rem 6rem;
+            gap: 1.5rem;
+            .st-title{
+                width: 20rem;
+                font-size: 2rem;
+                font-weight: 400;
+                position: relative;
+                top:-2rem;
+                right: -1rem;
+            }
+            .st-pald{
+                color: components.$color-wd;
+                position: relative;
+                top:-2rem;
+                width: 15.7rem;
+                font-size: 1.1rem;
+                left: -1rem;
+            }
+        }
+        .st-part-table{
+            background-color: components.$color-pag;
+            padding: 0rem 6rem;
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+            border: 1px solid components.$color-pag-gris;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0;
+            .st-part-td{
+                background-color: components.$color-pag;
+                padding: 0.8rem  2rem  2rem  2rem;
+                border-radius: 0.8rem;
+                margin: 0.2rem;
+                width: 15rem;
+                z-index: 1;
+                position: relative;
+                top: -7rem;
+                box-shadow: -1px 5px 20px black,  0.3em 0.3em 1em rgba(0,0,0,0.3),-1em 0.3em 1em rgba(0,0,0,0.3);
+                .st-main{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:flex-start;
+                    gap: 1rem;
+                    .icon-st{
+                        color: components.$color-text;
+                        font-size: 2.7rem;
+                        margin-bottom: 2rem;
+                    }
+                    .st-td-title{
+                        margin: 0;
+                        color: components.$color-pag2;
+                    }
+                    .st-td-parrafo{
+                        color: rgb(134, 132, 132);
+                        margin-bottom: 0.3rem;
+                    }
+                    .deffline{
+                        width: auto;
+                        height: 0.3rem;
+                        background-color: #3F4349;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+//Here this rule Css Grid st-part-td
+#st-part-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#st-part-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+#st-part-3{
+    grid-column: 2;
+    grid-row: 1;
+    top: 4.1rem;
+
+}
+#st-part-4 {
+    grid-column: 2;
+    grid-row: 2;
+    top: 4.1rem;
+}
+
+//Seccion banner
+.sec-sdiv{
+    background-color: components.$color-pag;
+    width: 100%;
+    position: relative;
+    padding: 4rem  4rem  8rem 4rem;
+}
+//Seccion llmup
+.sec-llmup{
+    background-color: components.$color-pag;
+    width: 100%;
+    height: 54.7rem;
+    position: relative;
+    .div-llmup{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid components.$color-pag-gris;
+        margin: 0rem 4.5rem;
+        position: relative;
+        .head-llmup{
+            width: 50%;
+            background-image: url("/static/img/lines-font.jpg");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size:cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            .title-llmup{
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+        .tdcontext-llmup{
+            width: 50%;
+            border: 1px solid components.$color-pag-gris;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0;
+            padding: 7rem 8rem 6.5rem 8rem;
+            p{
+                color: rgb(134, 132, 132);
+                font-size: 1.1rem;
+            }
+            .div-btn{
+                margin-top:2rem ;
+                .btn-pag-info{
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+    }
+}
+//Seccion reference
+.sec-reference{
+    background-color: components.$color-pag;
+    width: 100%;
+    height: 51.8rem;
+    padding: 4.5rem 0rem;
+    position: relative;
+    .dm-reference{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        .dm-head{
+            .dm-title{
+                color: white;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+        .dm-datas{
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
+            .item-dm-data{
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-start;
+                text-align: center;
+                box-shadow: -1px 5px 20px black,  0.3em 0.3em 1em rgba(0,0,0,0.3),-1em 0.3em 1em rgba(0,0,0,0.3);
+                background-color: components.$color-pag;
+                padding: 1rem  1rem  1rem  1rem;
+                .item-dm-num{
+                    color: components.$color-text;
+                    font-size: 3.6rem;
+                    font-weight: 400;
+                }
+                .item-dm-p{
+                    color: rgb(134, 132, 132);
+                }
+                .dm-line-bt{
+                    width: auto;
+                    height: 0.3rem;
+                    background-color: #3F4349;
+                    border-radius: 2rem;        
+                }
+            }
+        }
+        .dm-font{
+            width: 100%;
+            height: 25rem;
+            background-image: url("../img/linew-fonts.png");
+            background-attachment:fixed, scroll;
+            background-repeat: no-repeat;
+            background-position: bottom, right;
+            background-size: cover;
+            box-shadow: -1px 5px 20px black,  0.3em 0.3em 1em rgba(0,0,0,0.3),-1em 0.3em 1em rgba(0,0,0,0.3);
+        }
+    }
+}
+
+//dm-item
+#dm-item-1{
+    grid-column: 1;
+    grid-row: 1;
+}
+#dm-item-2{
+    grid-column: 2;
+    grid-row: 1;
+}
+#dm-item-3{
+    grid-column: 3;
+    grid-row: 1;
+}
+#dm-item-4{
+    grid-column: 4;
+    grid-row: 1;
+}
+#dm-item-5{
+    grid-column: 5;
+    grid-row: 1;
+}
+
+// SECCION PARTNERS
+
+.sec-partners{
+    background-color: components.$color-pag;
+    width: 100%;
+    height: 59rem;
+    position: relative;
+    padding-top: 3.5rem;
+    .rtz-partners{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 0;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 0rem 4.5rem;
+        border: 1px solid components.$color-pag-gris;
+        .rtz-partners-item{
+            padding: 3rem;
+            color: white;
+            display: flex;
+            text-align: left;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid components.$color-pag-gris;
+        }
+        .rtz-font{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-image: url();
+            padding: 14rem 6rem;
+            gap: 1rem;
+            .rtz-title{
+                position: relative;
+                color: white;
+                font-size: 2rem;
+                font-weight: 400;
+                text-align: center;
+            }
+            .pp-rtz{
+                font-size: 1.1rem;
+                width: 17.9rem;
+                color: components.$color-text-gray;
+            }
+            
+            
+        }
+    }
+}
+
+#rt-item-1{
+    grid-column: 1;
+    grid-row: 1;
+}
+#rt-item-2{
+    grid-column: 2;
+    grid-row: 1;
+}
+#rt-item-3{
+    grid-column: 3;
+    grid-row: 1;
+}
+#rt-item-4{
+    grid-column: 4;
+    grid-row: 1;
+}
+#rt-item-5{
+    grid-column: 5;
+    grid-row: 1;
+}
+#rt-item-6{
+    background-image: url("../img/data.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    
+}
+#rt-item-7{
+    grid-column: 4 / 6;
+    grid-row: 2;
+}
+
+//********** CSS PAG INITIAL MENU
+
+.sec-menu-all{
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    background-image: url("../img/abstract_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    .zm-site-pag{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+        color: white;
+        margin-top: 9rem;
+        padding-left: 4.5rem;
+        .zm-head{
+            width: 53%;
+            .zm-thead{
+                font-size: 3.7rem;
+                font-weight: 400;
+            }
+        }
+        .zm-context{
+            width: 35%;
+            .zm-tdcontext{
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+    }    
+    &-solutions{
+        @extend .sec-menu-all;
+        height: 32rem;
+    }
+    &-vision{
+        @extend .sec-menu-all;
+        height: 48rem;
+        .zm-site-pag{
+            .zm-head{
+                width: 53%;
+                .zm-thead{
+                    font-size: 3.7rem;
+                    font-weight: 400;
+                }
+            }
+            .zm-context{
+                width: 60%;
+                .zm-tdcontext{
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+        } 
+    }
+    &-programs{
+        @extend .sec-menu-all;
+        height: 40rem;
+        background-color: components.$color-pag;
+        background-image: none;
+        .zm-site-pag{
+            .zm-head{
+                width: 70%;
+                .zm-thead{
+                    position: relative;
+                    left: 1rem;
+                    font-size: 3.7rem;
+                    font-weight: 400;
+                }
+            }
+            .zm-context{
+                width: 50%;
+                .zm-tdcontext{
+                    position: relative;
+                    left: 1rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &-blog{
+        @extend .sec-menu-all;
+        height: 35rem;
+        .zm-site-pag{
+            .zm-head{
+                width: 53%;
+                .zm-thead{
+                    font-size: 3.7rem;
+                    font-weight: 400;
+                }
+            }
+            .zm-context{
+                width: 60%;
+                .zm-tdcontext{
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &-privacy{
+        @extend .sec-menu-all;
+        height: 68rem;
+        .zm-site-pag{
+            background-color: rgba(48, 48, 48, 0.267);
+            width: 100%;
+            color:unset;
+            display: flex;
+            flex-direction: column;
+            margin: 0rem;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+            justify-content: center;
+            align-items: center;
+            .zm-head{
+                width: 55%;
+                .zm-thead{
+                    font-size: 3.7rem;
+                    font-weight: 400;
+                    color: white;
+                }
+            }
+            .zm-context{
+                width: 55%;
+                .zm-tdcontext{
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: components.$color-wd;
+                }
+                .zm-list{
+                    display: flex;
+                    flex-direction: column;
+                    .zm-ul-list{
+                        list-style-type: style;
+                        font-size: 1.1rem;
+                        color: components.$color-wd;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//************** CSS STYLE SOLUTIONS
+
+.sec-itsolut{
+    width: 100%;
+    background-color: components.$color-pag;
+    height: 84rem;
+    display: block;
+    position: relative;
+    .hk-itsolut{
+        background-color: components.$color-pag;
+        margin: 0 4.5rem;
+        position: relative;
+        top: -7rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 0;
+        grid-auto-rows: minmax(100px, auto);
+        border: 1px solid components.$color-pag-gris;
+        .hk-part-icon{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid components.$color-pag-gris;
+            .icon-hk{
+                color: black;
+                font-size: 3rem;
+                background-color: #889CE7;
+                padding: 0.8rem 1.5rem;
+                border-radius: 1rem;
+                &-dem{
+                    @extend .icon-hk;
+                    background-color: #FD6262;
+                }
+            }
+        }
+        .hk-part-item{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border: 1px solid components.$color-pag-gris;
+            padding: 3rem 4rem;
+            .title-hk{
+                color: white;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+            .p-hk{
+                width:82%;
+
+                color: components.$color-text-gray;
+            }
+        }
+    }
+    .rv-main-fix{
+        top: -6.9rem;
+        background-color: components.$color-pag;
+        margin: 0 4.5rem;
+        position: relative;
+        display: flex;
+        border: 1px solid components.$color-pag-gris;
+        height: 30rem;
+        .rv-head-fix{
+            width: 40%;
+            border: 1px solid components.$color-pag-gris;
+            background-image: url("../img/6224640.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+            .title-rv{
+                width: 75%;
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+        .rv-txt-fix{
+            width: 60%;
+            border: 1px solid components.$color-pag-gris;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem 9rem;
+            .pg-rv{
+                color: components.$color-text-gray;
+            }
+        }
+    }
+}
+//Item class hk ID
+
+#hk-item-1{
+    grid-column: 1;
+    grid-row: 1;
+}
+#hk-item-2{
+    grid-column: 2/6;
+    grid-row: 1;
+}
+#hk-item-3{
+    grid-column: 1;
+    grid-row: 2;
+}
+#hk-item-4{
+    grid-column: 2 / 6;
+    grid-row: 2;
+}
+#hk-item-5{
+    grid-column: 1;
+    grid-row: 3;
+}
+#hk-item-6{
+    grid-column: 2 / 6;
+    grid-row: 3;
+}
+#hk-item-7{
+    grid-column: 1;
+    grid-row: 4;
+}
+#hk-item-8{
+    grid-column: 2 / 6;
+    grid-row: 4;
+}
+
+#rv-item1{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+#rv-item2{
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+//************** CSS STYLE VISION
+.sec-vision{
+    width: 100%;
+    background-color: components.$color-pag;
+    height: 78rem;
+    display: block;
+    position: relative;
+    .lm-vision{
+        width: auto;
+        background-color: components.$color-pag;
+        margin: 0 4.5rem;
+        position: relative;
+        top: -7rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 0;
+        grid-auto-rows: minmax(100px, auto);
+        border: 1px solid components.$color-pag-gris;
+        .lm-part-head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid components.$color-pag-gris;
+            .title-lm{
+                font-size: 2rem;
+                font-weight: 400;
+                color: white;
+            }
+        }
+        .lm-part-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4.5rem 10rem;
+            border: 1px solid components.$color-pag-gris;
+            gap: 1.1rem;
+            .lm-pg{
+                line-height: 1.7rem;
+                width: 82%;
+                margin: 0;
+                font-size: 1rem;
+                color: components.$color-text-gray;
+            }
+        }
+    }
+}
+#lm-part1{
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-image: url("../img/lines-blue.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#lm-part2{
+    grid-column: 3 / 6;
+    grid-row: 1;
+}
+#lm-part3{
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+#lm-part4{
+    grid-column: 4 / 6;
+    grid-row: 2;
+    background-image: url("../img/lines-red.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+//************** CSS STYLE PROGRAMS
+.sec-programs{
+    width: 100%;
+    background-color: components.$color-pag;
+    height: 40rem;
+    display: block;
+    position: relative;
+    .rmz-programs{
+        width: auto;
+        background-color: components.$color-pag;
+        margin: 0 5.5rem;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0;
+        grid-auto-rows: minmax(100px, auto);
+        border: 1px solid components.$color-pag-gris;
+        .rmz-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .rmz-icon-td{
+                background-color: #1A1C1E;
+                padding: 2.5rem 7.5rem;
+                margin: 1.5rem 0rem;
+                border-radius: 0.5rem;
+                .icon-rmz{
+                    color: components.$color-text;
+                    font-size: 6.5rem;
+                }
+            }
+            .rmz-tpanel{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                align-items: flex-start;
+                border: 1px solid #fd62621f;
+                border-bottom: 0;
+                border-left: 0;
+                border-right: 0;
+                padding: 1.7rem 3rem 1rem 3rem;
+                background-color: components.$color-pag;
+                .title-rmz{
+                    width: 70%;
+                    font-size: 1.3rem;
+                    font-weight: 200;
+                    color: white;
+                }
+                .long-rmz{
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+                .line-rmz{
+                    margin: 1rem 0rem;
+                    width: 2.5rem;
+                    height: 0.1rem;
+                    background-color: components.$color-text-gray;
+                }
+                .price-rmz{
+                    color: white;
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                }
+                .btn-join{
+                    margin: 1rem 0rem;
+                }
+            }
+        }
+    }   
+}
+#rmz-item1{
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid components.$color-pag-gris;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    background-color: #141316;
+}
+#rmz-item2{
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid components.$color-pag-gris;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: #141316;
+}
+#rmz-item3{
+    grid-column: 3;
+    grid-row: 1;
+    border: 1px solid components.$color-pag-gris;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    background-color: #141316;
+}
+#link-2-rmz{
+    width: 85%;
+}
+#link-3-rmz{
+    margin-top: 1.9rem;
+    width: 90%;
+}
+//*********** CSS STYLE BLOG ITEMS
+.sec-blog{
+    width: 100%;
+    background-color: components.$color-pag;
+    height: auto;
+    display: block;
+    position: relative;
+    .pgm-blog{
+        width: auto;
+        margin: 0 5.5rem;
+        margin-bottom: -5.5rem;
+        position: relative;
+        top: -9rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.1rem;
+        grid-auto-rows: minmax(100px, auto);
+        .pgm-item-blog{
+            background-color: components.$color-pag;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid components.$color-pag-gris;
+            padding: 1.7rem 1.3rem 1rem 1.3rem;
+            gap: 1rem;
+            .pgm-itblog{
+                font-size: 0.8rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .pgm-timebg{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.7rem;
+                    .pgm-time{
+                        color: components.$color-text-gray;
+                    }
+                    .point-pgm{
+                        width: 2px;
+                        height: 2px;
+                        background-color: components.$color-text-gray;
+                    }
+                    .pgm-min{
+                        color: components.$color-text-gray;
+                    }
+                }
+                .icon-pgm-menu{
+                    color: components.$color-text-gray;
+                    font-size: 1rem;
+                    &:hover{
+                        color: components.$color-text;
+                    }
+                }
+            }
+            .pgm-review{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                .pgm-title{
+                    color: white;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                }
+                .pgm-text{
+                    color: components.$color-text-gray;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+            .pgm-line{
+                width: 100%;
+                height: 1px;
+                background-color:rgba(128, 128, 128, 0.205);
+            }
+            .pgm-state{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .pgm-view{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    
+                }
+            }
+            &:hover{
+                .pgm-review{
+                    .pgm-title{
+                        transition: ease 0.35s;
+                        color: components.$color-text;
+                    }
+                    .pgm-text{
+                        transition: ease 0.35s;
+                        color: components.$color-text;
+                    }
+
+                }
+            }
+        }
+        
+    }
+}
+.icon-pgm{
+    color: components.$color-text-gray;
+    font-size: 1rem;
+}
+.pgm-num{
+    color: components.$color-text-gray;
+    font-size: 0.8rem;
+    position: relative;
+    top: -0.1rem;
+}
+.active-pgm{
+    color: components.$color-text;
+}
+//Item blog
+#pgm-item-1{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+#pgm-item-2{
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+#pgm-item-3{
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+#pgm-item-4{
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+#pgm-item-5{
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+#pgm-item-6{
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+#pgm-item-7{
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+#pgm-item-8{
+    grid-column: 2 / 3;
+    grid-row: 3;
+}
+
+//*********** STYLE FOOTER FOR ALL PAG
+.pag-footer{
+    background-color: components.$color-pag;
+    width: 100%;
+    position: relative;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    .ft-data{
+        margin: 0rem 4.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .ft-info-data{
+            display: flex;
+            flex-direction: column;
+            .logo-data{
+                margin-bottom: 2rem;
+                .logo-txt{
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+            .inf-dir-mail{
+                margin: 0;
+                p{
+                    color: components.$color-text-gray;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .ft-map-menu{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ft-form-data{
+            .wm-form{
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                .sub-form{
+                    color: components.$color-text-gray;
+                    font-size: 1.2rem;
+                }
+                .email-form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    label{
+                        color: components.$color-text-gray;
+                    }
+                    input{
+                        border: 1px solid components.$color-text-gray;
+                        background-color: components.$color-pag;
+                        border-radius: 0.1rem;
+                        width: 17rem;
+                        height: 3.5rem;
+                        &:focus{
+                            transition: ease 0.20s;
+                            border: 1px solid components.$color-text-gray;
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .ft-social-private{
+            .social-share{
+                .share-title{
+                    font-size: 1.2rem;
+                    color: components.$color-text-gray;
+                }
+                .icon-share{
+                    display: flex;
+                    gap: 0.5rem;
+                    i{
+                        font-size: 1.5rem;
+                        color: components.$color-text-gray;
+                    }
+                }
+            }
+            .copyright-site{
+                margin-top: 4rem;
+                display: flex;
+                flex-direction: column;
+                font-size: 0.9rem;
+                gap: 1rem;
+                .pw-privacy{
+                    a{
+                        color: components.$color-text-gray;
+                    }
+                }
+                .ft-copyright{
+                    color: components.$color-text-gray;
+                }
+            }
+        }
+        .item-footer{
+            position: relative;
+            top: 0;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<div class="dropdown-category">
+    <ul class="ul-category">
+        <li class="li-category"><a class="title-ctg" href="?category=Todos">Todos</a></li>
+        <li class="li-category"><a class="filter-text" href="?offers=1">Ofertas</a></li>
+        {% for category in categories %}
+            <li class="li-category"><a class="filter-text" href="?category={{ category.product_category }}">{{ category.product_category }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

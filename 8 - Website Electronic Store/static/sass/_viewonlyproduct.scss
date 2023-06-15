@@ -1,0 +1,179 @@
+@use "components";
+
+.sec-view-product{
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    .article-product{
+        width: 100%;
+        padding: 3rem 14rem;
+    }
+    
+}
+.options-navigate-prd{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    .navigate-optBack{
+        display: block;
+        .goBack-link{
+            text-decoration: none;
+            color: black;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .name-prod-list{
+            color: rgba(0, 0, 0, 0.342);
+            font-size: 1.1rem;
+        }
+    }
+    .prev-next-prod{
+        display: block;
+        .prevBack{
+            text-decoration: none;
+            color: black;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        .nextBtn{
+            text-decoration: none;
+            color: black;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.next-button, .prev-button{
+    font-size: 1.1rem;
+}
+
+.product-main-view{
+    width: 100%;
+    display: flex;
+    .image-div-product{
+        width: 60%;
+        .div-image-slc{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            justify-content: center;
+            padding: 6rem 4rem;
+        }
+        .descrip-clm-prd{
+            padding-top: 3.5rem;
+            .p-clm-text{
+                font-weight: 300;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .details-product{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2rem;
+        .title-product{
+            color: black;
+            font-size: 1.7rem;
+            padding: 0;
+        }
+        .text-sm-prod{
+            color: black;
+            font-weight: 300;
+            font-size: 0.9rem;
+            &-dis{
+                @extend .text-sm-prod;
+                color: rebeccapurple;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+            &-stock{
+                @extend .text-sm-prod;
+                color: rgb(0, 0, 0);
+                padding-bottom: 0.5rem;
+            }
+        }
+        .price-div{
+            padding: 0.8rem 0;
+            .txt-price-ls{
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+        .stock-prod{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .input-stock{
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.185);
+                font-weight: 300;
+                padding: 0.4rem 0 0.4rem 0.7rem;
+            }
+        }
+        .actions-buy-div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 2rem 0 1.5rem 0;
+            .add-car-div{
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .purcharse-div{
+                display: flex;
+                width: 100%;
+            }
+        }
+        .view-details-all{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+.btn-preview-info{
+    @include components.button-blank();
+    font-weight: 400;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    justify-content: space-between;
+}
+
+
+.line-div-info{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.div-main-lgm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-lgm{
+    display: none;
+    .info-text-lgm{
+        font-weight: 300;
+    }
+    &-prod{
+        @extend .info-lgm;
+    }
+    &-politic{
+        @extend .info-lgm;
+    }
+    &-send-legal{
+        @extend .info-lgm;
+    }
+}

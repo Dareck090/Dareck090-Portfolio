@@ -1,0 +1,1046 @@
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+.container{
+  width:90%;
+  margin: 0 auto;
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+/***************************** HEADER ********************/
+.HeaderPage{
+  width: 90%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+  padding-top:15px;
+}
+#navbar{
+  overflow: hidden;
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  z-index: 1;
+}
+/* Titulo de la pagina */
+.HeaderPage .login-Regis{
+  width: 24%;
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  flex-flow:row nowrap;
+}
+.login-Regis .log, .login-Regis .TitlePage{
+  margin-right: 40%;
+}
+.logoPage img{
+  width: 60px;
+  height: 60px;
+  position:relative;
+  top: 5%;
+  left: 0%;
+}
+/*Estilos remplazados con JavaScript*/
+.login-Regis2{
+  width: 82%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  transition: 0.7s;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.login-Regis2 .TitlePage{
+  transition: 0.7s;
+  padding-top: 13px;
+}
+.login-Regis2 .Log{
+  margin-left: 43%;
+  padding-top: 10px;
+  transition: 0.7s;
+}
+/*Fin de estilos encabezado scroll*/
+.HeaderPage .TitlePage{
+  font-size: 21px;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+.HeaderPage .TitlePage .TitleColor{
+  color: rgb(14, 219, 151);
+}
+/* Inicio de sersion y button resgitrarse */
+.FondoLogin{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight:bold;
+  margin-top: 5px;
+}
+.HeaderPage .Log a{
+  text-decoration: none;
+  color: black;
+}
+.Log .LoginOn{
+  display: flex;
+  flex-direction: row;
+  padding-right: 12%;
+  padding-left: 2%;
+  white-space: nowrap;
+  margin-right: 5%;
+}
+.HeaderPage .Log{
+  font-size: 19px;
+}
+.textologin{
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+.HeaderPage .Log .Register a{
+  border: 1px solid #35424a;
+  background-color: #35424a;
+  color: #ffffff;
+  border-radius: 13px;
+  padding: 7%;
+}
+.FondoLogin .Register{
+  margin-left: 20px;
+}
+.HeaderPage .Log .Register a:hover{
+  background-color: #8dceb8;
+  color: #000000;
+}
+/* Barra de Busqueda */
+.HeaderSearch{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+.Search{
+  margin-top: 5%;
+}
+.HeaderSearch input#search_bar{
+  background-color: #ffffff;
+  padding-left: 15%;
+  padding-right: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-size: 15pt;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  outline: none;
+}
+.HeaderPage .HeaderSearch .Search{
+  width: 100%;
+}
+input#search_bar::placeholder{
+  width: max-content;
+  text-align: center;
+}
+.input-icon{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 12px;
+	top:48%;
+	transform: translateY(-50%);
+}
+/*********Estilos para la seccion de navegacion*********/
+  /*Responsive sidebar*/
+.sidenav{
+  display: flex;
+  align-items: center;
+  position:relative;
+  width: 90%;
+  margin-right:0%;
+  margin-bottom:0%;
+  margin-top:1%;
+}
+
+/* Estilo de los enlaces de sidenav y al botón desplegable */
+.sidenav a, .dropdown-btn{
+  background-color: #48e0a6;
+  text-decoration: none;
+  color: #000000;
+  margin: top;
+  margin-right: 1px;
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight:bold;
+}
+.dropdown-btn{
+  border: 2px solid #48e0a6;
+  background-color: #48e0a6;
+  display: flex;
+}
+.dropdown-btn:hover{
+  border: 2px solid #c3d6d0;
+  background-color:#c3d6d0;
+}
+/* Cambia el color al pasar el mouse */
+.sidenav a:hover{
+  background-color: #c3d6d0;
+  color: #000000;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container{
+  display: none;
+  position: none;
+  float: none;
+  border-radius: 1px;
+}
+/*Mostrar sub menu*/
+.dropdown:hover .dropdown-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    float: none;
+    border-radius: 1px;
+}
+/* Icono para desplegar submenu */
+.fa-caret-down {
+  float: right;
+  margin-left: 5px;
+}
+/*boton del menu y cerrar*/
+#ButtonMenu{
+  visibility: hidden;
+  position:absolute;
+  padding: 0;
+}
+#ButtonLogin{
+  visibility: hidden;
+  position:absolute;
+  padding: 0;
+}
+.closebtn{
+  visibility: hidden;
+  position:absolute;
+  padding: 0;
+}
+.closebtnLogin{
+  visibility: hidden;
+  position:absolute;
+  padding:0;
+}
+/**************** About Contenido **************/
+#main{
+  min-height:250px;
+  text-align:center;
+  color:#000000;
+  margin-top: 235px;
+}
+#allcontent{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  border-top: 2px solid #5ec099;
+}
+#aboutContent{
+  margin-top: 18px;
+  width: 75%;
+}
+.About-post{
+  margin: 0px;
+}
+.post{
+  display: block;
+  text-align: center;
+  align-items: center;
+  text-align: justify;
+}
+.post .post-header{
+  text-align: center;
+}
+.post .post-entry{
+  margin: 0px auto;
+  width: 80%;
+  font-size: large;
+  color: rgb(99, 96, 96);
+  font-size: large;
+}
+/**************** Aside About **************/
+#asidePage{
+  float: right;
+  margin-top: 18px;
+  width: 25%;
+}
+.widget{
+  margin-right: 0;
+  float: none;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(231,205,218,1.5);
+}
+.widget .title{
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: -30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#asidePage .title span{
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color:#f4f4f4;
+}
+.textwidget{
+  text-align:center;
+  color: rgb(99, 96, 96);
+  font-size: 16px;
+  line-height: 26px;
+}
+.textwidget img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+/**************** contednido de recetas **************/
+#main2{
+  min-height:250px;
+  text-align:center;
+  color:#000000;
+  margin-top: 265px;
+}
+#allcontent2{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  border-top: 2px solid #5ec099;
+}
+#aboutContent2{
+  margin-top: 18px;
+  width: 100%;
+}
+.About-post2{
+  margin: 0px;
+}
+.post2{
+  display: block;
+  text-align: center;
+  align-items: center;
+  text-align: justify;
+}
+.post2 .post-header2{
+  text-align: center;
+  color:white;
+  font-size: 2em;
+  background-color: #87b7e4;
+}
+.post2 .post-entry2{
+  margin: 0px auto;
+  margin-top: 2%;
+  border-top: 2px solid #3b3f3d;
+  width: 80%;
+  font-size: large;
+  color: rgb(99, 96, 96);
+  font-size: large;
+  margin-bottom: 2%;
+}
+.post-entry2 p img{
+  width: 300px;
+  height: 280px;
+  border-radius: 100%;
+}
+/*******************LOGIN***************/
+#main3{
+  min-height:250px;
+  text-align:center;
+  color:#000000;
+  margin-top: 260px;
+}
+#allcontent3{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  border-top: 2px solid #5ec099;
+}
+#aboutContent3{
+  margin-top: 18px;
+  width: 100%;
+}
+.About-post3{
+  margin: 0px;
+}
+.post3{
+  display: block;
+  text-align: center;
+  align-items: center;
+  text-align: justify;
+}
+.post3 .post-header3{
+  margin: 0px auto;
+  width: 80%;
+  text-align: center;
+  color:white;
+  font-size: 20px;
+  background-color: #87b7e4;
+}
+.post3 .post-entry3{
+  margin: 0px auto;
+  margin-top: 2%;
+  border-top: 2px solid #3b3f3d;
+  width: 80%;
+  font-size: large;
+  color: rgb(99, 96, 96);
+  font-size: large;
+  margin-bottom: 2%;
+}
+.post-entry3 p img{
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+/*****ESTILO DEL FORMULARIO REGSITER****/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+/************FORM LOGIN**********/
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.imgcontainer{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.imgcontainer img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+/***************Showcase**************/
+#showcase{
+  min-height:250px;
+  text-align:center;
+  color:#ffffff;
+  height: 110px;
+  margin-top: 235px;
+}
+/***************************** SLIDER ********************/
+.section1{
+  width:100%;
+  background:url('../img/fondo-recetas.png') no-repeat 0 -300px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+.slider {
+	width: 67%;
+	margin: auto;
+	overflow: hidden;
+  padding: auto;
+  height: 250px;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 100%;
+	animation: cambio 25s infinite alternate linear;
+}
+.slider ul li img{
+  width: 530px;
+  height: 370px;
+}
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+.slider li h1{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+  color: #ffffff;
+  padding-left: 45px;
+}
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -50%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -150%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -250%;}
+	100% {margin-left: -262%;}
+}
+/******************************* BOXES *************************/
+#boxes{
+  margin-top:20px;
+}
+#boxes .section2{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+#boxes .column-title{
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+  color: #48e0a6;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+#boxes .box{
+  display: flex;
+  flex-direction: row;
+  float:left;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding-left: 23px;
+}
+
+#boxes .box .img-recetas{
+  background-color: rgb(235, 182, 113);
+  margin-right: 40px;
+  padding-bottom:13px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+}
+#boxes .box .img-items{
+  width:265px;
+  height: 190px;
+  border-radius: 10px;
+}
+#boxes .img-recetas:hover{
+  -webkit-transform:scale(1.1);
+  transform:scale(0.96);
+  filter: opacity(.5) contrast(1.2);
+  transition: 300ms all ease;
+}
+/********************PIE DE PAGINA****************/
+footer{
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  color:#000000;
+  justify-content: center;
+  align-items:center ;
+}
+.wrapFooter{
+  width: 82%;
+  margin-left: 10%;
+  padding-top: 12px;
+  display: flex;
+  background: #eef0f1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.FooterSide{
+  margin-right: 19px;
+  width: 90%;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  font-size: 11px;
+  flex-direction: column;
+}
+.FooterSide .GrupoTI{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.FooterSide .GrupoTI{
+  margin-right: 12px;
+}
+.wrapFooter2{
+  width: 100%;
+  background-color: #e6e6e6;
+  color: rgb(133, 127, 127);
+  text-align: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+.img-footer{
+  display: flex;
+  flex-flow: row wrap;
+}
+.wrapSide a{
+  text-decoration: none;
+  color: #000000;
+}
+.wrapSide a:hover{
+  color: #7e3333;
+}
+.img-footer .more-img:hover{
+  -webkit-transform:scale(1.1);
+  transform:scale(0.96);
+  filter: opacity(.5) contrast(1.2);
+}
+.img-footer .more-img{
+  width: 150px;
+  height: 100px;
+  margin: 3px;
+}
+/* Media Queries */
+@media(max-width: 1114px){
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  #showcase,
+  .container,
+  header,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:12px;
+  }
+  /*********************** HEADER *****************************/
+  .HeaderPage{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Titulo de la pagina */
+  .HeaderPage .login-Regis{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-Regis .TitlePage{
+    margin-right: 0%;
+    padding-top:0px;
+    font-size: 12px;
+    transition: 0.7s;
+  }
+  /* Inicio de sersion y button resgitrarse */
+  /*Ocultar el div log para el menu*/
+  .Log{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+    right: 0;
+    padding: 0;
+    background-color: rgba(178, 235, 195, 0.76);
+    overflow-x:hidden;
+    transition: 0.5s;
+    display: flex;
+    margin-top:0%;
+  }
+  #SideLogin .LoginOn{
+    padding: 0;
+  }
+  .Log .closebtnLogin{
+    position: absolute;
+    font-size: 40px;
+    top:0;
+    right: 20px;
+  }
+  .closebtnLogin{
+    visibility:visible;
+  }
+  #ButtonLogin{
+    visibility:visible;
+    position: absolute;
+    right: 12px;
+    top: 24px;
+  }
+  #ButtonLogin img{
+    visibility:visible;
+    width: 34px;
+  }
+  .FondoLogin{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content:space-around;
+    bottom: 12px;
+    width: 0;
+    height: 60%;
+    right: 15px;
+    top: 7%;
+    background-color: rgb(193, 196, 134);
+    position: absolute;
+    transition: .5s;
+  }
+  .textologin{
+    visibility: visible;
+    width: 70%;
+    text-align: center;
+    position: relative;
+    height: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .textologin .imglog{
+    width: 150px;
+    height: 150px;
+  }
+  .FondoLogin .LoginOn{
+    height: 10px;
+  }
+  /*****Barra de Busqueda*****/
+  .HeaderSearch .Search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .input-icon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -13px;
+    top:38%;
+    transform: translateY(-50%);
+  }
+  /*********Estilos para la seccion de navegacion*********/
+  /*Responsive sidebar*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+    margin-top:0%;
+  }
+
+/* Estilo de los enlaces de sidenav y al botón desplegable */
+  .sidenav a, .dropdown-btn , .closebtn{
+    padding: 6px 8px 5px 17px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    border: none;
+    display: flex;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0px;
+    transition: 0.3s;
+  }
+  .sidenav .closebtn{
+    position: relative;
+    font-size: 40px;
+    left: 65%;
+    top: 2%;
+  }
+  .sidenav a:hover, .dropdown-btn a:hover{
+    background-color: #74323200;
+  }
+  .dropdown-container{
+    display: none;
+    position: absolute;
+    background-color: #d8d8d8;
+    margin-left:10px ;
+    padding-right: 0px;
+    
+  }
+  .dropdown-container a{
+    float: none;
+    text-decoration: none;
+    padding-right:0;
+    margin: 0;
+    display: block;
+    width: 92%;
+  }
+  .dropdown-btn .dropdown-container a:hover{
+    display: none;
+    position: absolute;
+  }
+  .dropdown:hover .dropdown-container{
+    display: flex;
+    flex-direction: column;
+  }
+  /* Cambia el color al pasar el mouse en el submenu */
+  .dropdown-container a:hover{
+    background-color: #7e3333;
+  }
+  /* Cambia el color al pasar el mouse */
+  .sidenav a:hover, .dropdown-btn:hover, .closebtn{
+    color: #f1f1f1;
+  }
+  /* Agregar una clase activa al botón desplegable activo */
+  .active{
+    background-color: rgb(158, 0, 0);
+    color: white;
+  }
+  /* Contenedor desplegable (oculto por defecto). Opcional: agregue un color de fondo más claro y algo de relleno a la izquierda para cambiar el diseño del contenido desplegable*/
+  .dropdown-btn:hover{
+    background-color:  rgb(158, 0, 0);
+    border: none;
+  }
+  /* Icono para desplegar submenu */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  /*****boton del menu*****/
+  #ButtonMenu{
+    color: turquoise;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    transition: 0.5s;
+    padding-top: 40px;
+    margin-left: 12px;
+    
+  }
+  #ButtonMenu{
+    visibility:visible;
+  }
+  .closebtn{
+    visibility:visible;
+  }
+  /***********ABOUT STYLE*****************/
+  #main{
+    min-height: 12px;
+    margin-top: 140px;
+  }
+  #allcontent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    border-top: 2px solid #5ec099;
+  }
+  #asidePage{
+    float: right;
+    margin-top: 18px;
+    width: 93%;
+  }
+  #aboutContent{
+    width: 100%;
+  }
+  /************************MAIN RECETAS*************************/
+  #main2{
+    min-height: 12px;
+    margin-top: 160px;
+  }
+  /***MAIN 3*****/
+  #main3{
+    min-height:250px;
+    text-align:center;
+    color:#000000;
+    margin-top: 180px;
+  }
+  /**************** SLIDER IMG ********************/
+  #showcase{
+    min-height: 12px;
+    text-align:center;
+    color:#ffffff;
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  
+  .section1{
+    width: 100%;
+    background:url('../img/fondo-recetas.png') no-repeat 0 -300px;
+    margin: 0 auto;
+    border-radius: 0px;
+  }
+  .slider {
+    width: 67%;
+    margin: auto;
+    overflow: hidden;
+    padding: auto;
+    height: 160px;
+  }
+  .slider li h1{
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    align-items: center;
+  }
+  .slider ul li img{
+    width: 299px;
+    height: 180px;
+  }
+  @keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -50%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -150%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -250%;}
+    100% {margin-left: -340%;}
+  }
+  /**********************BOX*******************/
+  /*Contiene los estilos de los items de recetas*/
+  #boxes{
+    margin-top: 2px;
+  }
+  #boxes .section2{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #boxes .box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items:stretch;
+    padding-left: 0%;
+  }
+  #boxes .column-title{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    padding-top: 2px;
+    margin-bottom: 12px;
+  }
+  #boxes .box .img-recetas{
+    display: block;
+    width: 40%;
+    margin:2%;
+    margin-bottom: 12px;
+  }
+  #boxes .box .img-recetas .itemh2{
+    font-size: 15px;
+  }
+  #boxes .box .img-recetas .img-items{
+    width: 100%;
+    height: 120px;
+  }
+  #boxes .img-recetas:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(0.96);
+  }
+  /*******************FOOTER*****************/
+  .wrapFooter{
+    width: 100%;
+    margin-left: 0%;
+    display: flex;
+    background: #eef0f1;
+    flex-direction: column;
+  }
+  .FooterSide{
+    margin-right: 19px;
+    width: 90%;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    font-size: 11px;
+    flex-direction: column;
+  }
+  .img-footer{
+    display: block;
+  }
+  .img-footer .more-img{
+    width: 100px;
+    height: 85px;
+    margin: 3px;
+  }
+}

@@ -1,0 +1,1536 @@
+@use "components";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lily+Script+One&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$text-font-full: 'Roboto Slab', serif;
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+.full-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h2,h3.h4.h5,h6,a,p,span{
+    font-family: 'Noto Sans', sans-serif;
+}
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+//************** CSS SYTLE INICIO **************
+//Section principal
+.th-div-pag{
+    width: 100%;
+    height: auto;
+    background-image: url(../img/fondo-codm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section-main{
+    margin: 0 6.2rem;
+    height: 55rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -9.5rem;
+    .title-div{
+        .title-th{
+            font-size: 5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+    }   
+    .parragraph-div{
+        margin-bottom: 1.5rem;
+        .pghp-th{
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+    .store-play-div{
+        display: flex;
+        gap: 1.5rem;
+        .img-play{
+            width: 150px;
+            height: 45px;
+        }
+    }
+}
+//Link games
+
+.comp-games{
+    width: 100%;
+    height: 12rem;
+    background-color: components.$color-pag;
+    .comp-games-item{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 6.2rem;
+        position: relative;
+        top: -10rem;
+        .item-game{
+            border-radius: 1rem;
+            width: 16rem;
+            height: 22rem;
+            overflow: hidden;
+            position: relative;
+            #item-gm{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-transition: 1s linear;
+                transition: 1s linear;
+            }
+            .game-reference{
+                position: relative;
+                z-index: 1;
+                height: 19rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding: 0rem 1rem;
+                padding-bottom: 1rem;
+                .title-game{
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+                .category-game{
+                    color: white;
+                }
+                .div-explore{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    margin: 0 2rem;
+                    top: -3rem;
+                    font-weight: 600;
+                    .explore-game{
+                        color: white;
+                    }
+                    .icon-explore{
+                        color: white;
+                    }
+                }
+            }
+            &:hover{
+                #item-gm{
+                    transition: ease 0.4s;
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+                .game-reference{
+                    transition: ease-in-out 0.5s;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+#item-gm-4{
+    background-color: black;
+    &:hover{
+        transition: ease-out 1s;
+        background-color: rgb(39, 39, 39);
+        .game-reference:last-child{
+            display: flex;
+            opacity: 1;
+            .div-explore{
+                transition: ease-out 0.5s;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 0 2rem;
+                top: -3rem;
+                .explore-game{
+                    color: rgb(207, 206, 206);
+                }
+                .icon-explore{
+                    color: rgb(219, 216, 216);
+                }
+            }
+        }
+    }
+}
+
+//rs-about games
+
+.rs-about{
+    width: 100%;
+    height: 75rem;
+    background-color: components.$color-pag;
+    .rs-about-div{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 6.2rem;
+        padding: 9rem 0;
+        gap: 4rem;
+        .rs-about-descrip{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+            .rs-span{
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: components.$color-text;
+            }
+            .rs-title{
+                font-family: 'Roboto Slab', serif;
+                width: 40%;
+                font-size: 3rem;
+                font-weight: 900;
+                color: components.$color-text;
+            }
+            .rs-paragraph{
+                width: 62%;
+                font-size: 1.1rem;
+                color: components.$color-text;
+            }
+            .rs-button-div{
+                padding: 2px;
+            }
+        }
+        .rs-about-pp-img{
+            width: 55%;
+            height: 25rem;
+            border-radius: 0.7rem;
+            background-image: url(../img/equipo-trabajo-disanadores-videojuegos.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            &:hover{
+                transition: ease 0.4S;
+                filter: grayscale(0.5);
+            }
+        }
+        .rs-img-type{
+            position: relative;
+            top: -18rem;
+            left: -21rem;
+            .img-type{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+//vlw-games-space
+
+.vlw-games-space{
+    width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .vlw-div-space{
+        max-width: 100%;
+        height: 93.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 6.2rem;
+        gap: 5rem;
+        .vlw-ref-space{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+            .vlw-title{
+                font-size: 3rem;
+                color: components.$color-text;
+                font-weight: 900;
+                font-family: 'Roboto Slab', serif;
+            }
+            .vlw-context{
+                width: 60%;
+                font-size: 1.2rem;
+                color: components.$color-text;
+            }
+        }
+        .vlw-games-item{
+            width: 100%;
+            height: 65rem;
+            background-image: url(../img/scylla_codm.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            border-radius: 0.8rem;
+            .vlm-item-gm{
+                position: absolute;
+                background-color: white;
+                border-radius: 0.8rem;
+                width: 24rem;
+                height: 24rem;
+                padding: 3rem 3rem 2rem 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 2rem;
+                filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+                .vlw-img-games{
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        border-radius: 1rem;
+                        width: 90px;
+                        height: 90px;
+                        padding: 0.5rem;
+                        background-color: white;
+                        filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+                    }
+                    .vlw-descrip-gm{
+                        display: flex;
+                        flex-direction: column;
+                        .vlw-title-gm{
+                            font-size: 1.3rem;
+                            font-weight: 900;
+                            color: components.$color-text;
+                        }
+                        .vlw-tag-gm{
+                            font-size: 1rem;
+                            color: components.$color-text;
+                        }
+                    }
+                }
+                .vlw-gm-context{
+                    display: flex;
+                    text-align: left;
+                    .vlw-paragraph-it{
+                        font-size: 1rem;
+                        color: components.$color-text;
+                        margin: 0;
+                    }
+                }
+                .vlw-gm-store{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    img{
+                        width: 130px;
+                        height: 38px;
+                    }
+                }
+            }
+        }
+    }
+}
+#vlw-gm-1{
+    top: 0rem;
+    left: 0rem;
+}
+#vlw-gm-2{
+    top: 0rem;
+    right: 0rem;
+}
+#vlw-gm-3{
+    bottom: 0rem;
+    left: 0rem;
+}
+
+//Seccion de contacto y suscripcion
+.mbl-contact-space{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .mbl-div-space{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .mbl-div-lim{
+            margin: 0 6.2rem;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: white;
+            gap: 1.7rem;
+            position: relative;
+            .mbl-txt{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+            .mbl-title-gm{
+                width: 80%;
+                font-size: 3rem;
+                font-weight: 900;
+                font-family: $text-font-full;
+            }
+            
+        }
+        .mbl-div-form{
+            margin: 0 6.2rem;
+            height: 100%;
+            position: relative;
+            top: -12.5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+    }
+}
+//Este form pertenece a mbl-div-space | Form 1 contact
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: white;
+    border-radius: 1rem;
+    width: 28rem;
+    padding: 3rem;
+    margin-left: 3rem;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+    .form-title{
+        color: components.$color-text;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .form-paragraph{
+        width: 75%;
+        font-size: 1.15rem;
+        color: components.$color-text;
+    }
+    .form-all-contact{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1.3rem;
+        .form-dw-fm{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            .label-txt{
+                font-size: 1rem;
+                font-weight: 400;
+                color: components.$color-text;
+            }
+            .input-form{
+                width: 100%;
+                outline: none;
+                border: 1px solid components.$color-text;
+                height: 3.5rem;
+                padding: 1rem;
+                border-radius: 0.7rem;
+                &-email{
+                    @extend .input-form;
+                }
+                &-textarea{
+                    @extend .input-form;
+                    height: 7rem;
+                    resize: none;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+    .form-all-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+// form del mbl-div-space | Form 2 suscripcion
+.form-contact-sbp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: components.$color-text;
+    padding: 2.5rem 2rem;
+    color: white;
+    border-radius: 1rem;
+    gap: 1rem;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+    .title-form-rv{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    .form-contact-email{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        .label-txt{
+            font-size: 1rem;
+            font-weight: 400;
+            color: white;
+        }
+        .input-form-sbp{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .input-fm-email{
+                width: 17rem;
+                height: 3.5rem;
+                outline: none;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+//Id de las secciones y position absolute item contact
+#mb-part-sect1{
+    background-image: url(../img/video-games-war-battle.png);
+    height: 51rem;
+}
+#mb-part-sect2{
+    background-image: url(../img/peakpx-fondo.jpg);
+    height: 39rem;
+}
+#mbl-item1{
+    width: 100%;
+    padding: 7rem 0;
+}
+#mbl-item2{
+    .img-mbl-contact{
+        position: absolute;
+        width: 500px;
+        width: 500px;
+        bottom: 0;
+        right: 0;
+    }
+}
+#mbl-item3{
+    width: 50%;
+    position: relative;
+}
+#mbl-item4{
+    width: 50%;
+    position: relative;
+}
+//************CSS STYLE EMPLOYES PAG********
+
+.employes-space{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-employes{
+        margin: 0 6.5rem;
+        height: 36rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        top: 2rem;
+        .employes-content-ls{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.3rem;
+            .xlv-subtitle{
+                color: components.$color-text;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            .xlv-title{
+                color: components.$color-text;
+                font-weight: 900;
+                font-size: 3.5rem;
+                font-family: 'Roboto Slab', serif;
+            }
+            .xlv-paragraph{
+                width: 53%;
+                color: components.$color-text;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.offers-main{
+    width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-offers{
+        width: auto;
+        height: 55rem;
+        margin: 0 6.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/gray-abstract.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 6rem 0;
+        .ofrx-div-tlt{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            .ofrx-title{
+                text-align: center;
+                color: white;
+                font-weight: 900;
+                font-size: 3rem;
+                font-family: 'Roboto Slab', serif;
+            }
+        }
+        .offers-item-main{
+            margin-top: 4.5rem;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            .item-offers{
+                width: 15rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                .img-offers{
+                    width: 100%;
+                    height: 220px;
+                    border-radius: 1rem;
+                    margin-bottom: 1.5rem;
+                }
+                .offers-post{
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    .ff-title{
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                    }
+                    .ff-location{
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                    .ff-description{
+                        margin-top: 1.5rem;
+                        color: white;
+                        font-size: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+.cv-offers-main{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-cv-offers{
+        width: auto;
+        height: 32rem;
+        margin: 0 6.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(../img/artistic-blue.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 6rem 4rem;
+        .div-cv-part{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: white;
+            position: relative;
+            padding: 3rem;
+            .span-txt{
+                font-size: 1.2rem;
+                font-weight: 900;
+                margin-bottom: 0.5rem;
+            }
+            .cv-title{
+                font-size: 3rem;
+                font-family: 'Roboto Slab', serif;
+                font-weight: 900;
+            }
+            button{
+                margin-top: 2.1rem;
+            }
+        }
+    }
+}
+
+//************CSS STYLE ABOUT PAG********
+.sec-about-space{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-about-pml{
+        margin: 0 6.5rem;
+        height: 38rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        top: 2rem;
+        .part-ls-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.3rem;
+            .pml-subtle{
+                color: components.$color-text;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            .pml-title-rx{
+                width: 60%;
+                color: components.$color-text;
+                font-weight: 900;
+                font-size: 3.5rem;
+                font-family: 'Roboto Slab', serif;
+            }
+        }
+    }
+}
+
+.sec-about-descrip{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .sec-abt-main{
+        width: auto;
+        height: 42rem;
+        background-color: rgb(44, 44, 44);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .img-about-abt{
+            width: 40%;
+            height: 42rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../img/diseñando\ juego.jpg);
+        }
+        .abt-div-content{
+            background-image: url(../img/about-img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60%;
+            height: 42rem;
+            .context-abt{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                color: white;
+                padding: 5rem 12rem;
+                .abt-pp{
+                    width: 94%;
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.to-about-space{
+    width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .main-div-fxl{
+        max-width: 100%;
+        height: 57rem;
+        margin: 0 6.2rem;
+        background-image: url(../img/drawing-cod.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        .jl-main-item{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 9rem 7rem;
+            .div-fxl-rm1{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 4rem;
+                .do-title-fx{
+                    color: components.$color-text;
+                    font-size: 3.5rem;
+                    font-family: $text-font-full;
+                    font-weight: 900;
+                }
+            }
+            .div-fxl-rm2{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                margin-bottom: 3rem;
+                .item-fxl-main{
+                    width: 26rem;
+                    background-color: white;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 2rem;
+                    gap: 1rem;
+                    box-shadow:
+                    inset 0 -3em 3em #ffffff17,
+                            0 0  0 2px rgb(255,255,255),
+                            0.3em 0.3em 1em rgba(153, 14, 14, 0.151);
+                    .fxl-title{
+                        color: #DA392B;
+                        font-weight: 700;
+                        font-size: 2.3rem;
+                    }
+                    .fxl-paragraph{
+                        color: components.$color-text;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .div-fxl-rm3{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 3rem;
+                .item-fxl-2{
+                    width: 100%;
+                    background-color: white;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 2rem;
+                    gap: 1rem;
+                    box-shadow:
+                    inset 0 -3em 3em #ffffff17,
+                            0 0  0 2px rgb(255,255,255),
+                            0.3em 0.3em 1em rgba(153, 14, 14, 0.151);
+                    .fxl-title{
+                        color: #DA392B;
+                        font-weight: 700;
+                        font-size: 2.3rem;
+                    }
+                    .fxl-paragraph{
+                        color: components.$color-text;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.sec-members-abt{
+    width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    height: 50.5rem;
+    .div-members-abt{
+        max-width: 100%;
+        height: 44.5rem;
+        margin: 0 6.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        background-color: components.$color-text;
+        color: white;
+        .mrb-abt-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 7.2rem;
+            .title-mrb{
+                font-size: 3.5rem;
+                font-weight: 700;
+                font-family: $text-font-full;
+            }
+        }
+        .members-all-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .item-fix-mbrs{
+                width: 18rem;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                .img-members{
+                    width: 220px;
+                    height: 260px;
+                    border-radius: 1rem;
+                }
+                .dsc-mbrs{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    .title-mrbs{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sec-location-office{
+    min-width: 100%;
+    height: auto;
+    background-image: url(../img/working-game.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .div-lct-office{
+        width: auto;
+        height: 54rem;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        background-color: rgba(0, 0, 0, 0.582);
+        color: white;
+        padding-top: 4rem;
+        .lct-main-1{
+            width: 50%;
+            padding: 9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .lct-ref{
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            .lct-title{
+                font-weight: 900;
+                font-family: $text-font-full;
+                font-size: 3.5rem;
+            }
+            .lct-paragraph{
+                font-size: 1.2rem;
+            }
+        }
+        .lct-main-2{
+            width: 50%;
+            padding: 9rem;
+            .lct-div-cont{
+                background-color: white;
+                border-radius: 1rem;
+                color: components.$color-text;
+                position: relative;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-top: 9rem;
+                img{
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    top: -9.7rem;
+                    left: 2rem;
+                }
+                .space-line{
+                    height: 2px;
+                    width: 100%;
+                    background-color: black;
+                }
+                .lct-title-wrk{
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+                .lct-paragraph-wrk{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+//************CSS STYLE ABOUT TERMS AND PRIVACY********
+.sec-politic-space{
+    min-width: 100%;
+    height: auto;
+    .div-space-plc{
+        background-image: url(../img/red-blackfont-i.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 24rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .div-plc-part{
+            width: 100%;
+            margin: 0 6.5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            top: 1rem;
+            .plc-title-tm{
+                color: white;
+                font-size: 3.5rem;
+                font-weight: 900;
+                font-family: $text-font-full;
+            }
+        }
+    }
+}
+.sec-descript-mk{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-mk-main{
+        width: auto;
+        padding: 8rem 22.5rem;
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .mk-paragraph{
+            color: components.$color-text;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+        .span-mk{
+            color: components.$color-text;
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            .mk-link{
+                text-decoration:underline;
+                color: components.$color-text;
+                cursor: pointer;
+            }
+        }
+        .ol-mk-main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .li-mk-item{
+                font-size: 1.3rem;
+                color: components.$color-text;
+            }
+        }
+    }
+}
+.sec-opt-main{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-opt-main{
+        background-image: url(../img/fin-font-black.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 6.5rem;
+        .opt-paragraph{
+            width: 62%;
+            text-align: center;
+            font-size: 1.25rem;
+            color: white;
+        }
+    }
+}
+//************ CSS STYLE ALL GAMES CONTENT *************
+.space-divgame{
+    min-width: 100%;
+    height: 18rem;
+    background-color: components.$color-pag;
+}
+.game-section-spml{
+    min-width: 100%;
+    height: auto;
+    .div-game-spml{
+        width: auto;
+        height: 42rem;
+        display: flex;
+        margin: 0  6.2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .item-game-spml{
+            width: 42rem;
+            padding: 3.7rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: white;
+            border-radius: 1rem;
+            gap: 1.5rem;
+            position: relative;
+            top: -10rem;
+            filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+            .img-div-spml{
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.3rem;
+                img{
+                    border-radius: 1.5rem;
+                    width: 90px;
+                    height: 90px;
+                    padding: 0.3rem;
+                    margin-bottom: 0.5rem;
+                    background-color: white;
+                    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+                }
+                .descrip-spml-gm{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .spml-title-gm{
+                        color: components.$color-text;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                    }
+                    .spml-paragraph-gm{
+                        color: components.$color-text;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .spml-title{
+                font-size: 3rem;
+                font-weight: 900;
+                font-family: $text-font-full;
+                color: components.$color-text;
+            }
+            .spml-paragraph{
+                // width: 85%;
+                font-size: 1.1rem;
+                color: components.$color-text;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#spml-game1{
+    background-image: url(../img/sniper_font.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#spml-game2{
+    background-image: url(../img/codm-fondo-gm2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#spml-game3{
+    background-image: url(../img/asphalt_font1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.images-games-dlsm{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-games-dlsm{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 6.2rem;
+        gap: 4rem;
+        height: 37.5rem;
+        .dlsm-title{
+            margin-top: 6rem;
+            font-size: 2rem;
+            color: components.$color-text;
+            font-weight: 700;
+            font-family: $text-font-full;
+        }
+        .slide-game-dlsm{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            .dlsm-img{
+                width: 34.3rem;
+                height: 18rem;
+                border-radius: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1rem;
+                    -webkit-transition: 1s linear;
+                    transition: 1s linear;
+                    &:hover{
+                        transition: ease 0.4s;
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reviews-game-rvw{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-reviews-rvw{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0 6.2rem;
+        padding-bottom: 7rem;
+        .head-reviews{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 5rem;
+            .content-points-main{
+                background-color: white;
+                width: 16rem;
+                height: 6rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1.5rem;
+                filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+                .points-game{
+                    width: 12rem;
+                    height: 3rem;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: #DA392B;
+                    border-radius: 1.5rem;
+                    gap: 1rem;
+                    padding: 0.2rem;
+                    .icon-rvw{
+                        width: 10%;
+                        margin-left: 1rem;
+                        font-size: 1.1rem;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .points-rvw{
+                        width: 100%;
+                        font-size: 1.1rem;
+                        height: 100%;
+                        border-radius: 1.5rem;
+                        background-color: white;
+                        color: components.$color-text;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .head-rvw-title{
+                font-size: 3rem;
+                font-weight: 900;
+                color: components.$color-text;
+                font-family: $text-font-full;
+            }
+        }
+        .reviews-item-main{
+            height: 25rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+            .item-rvw{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                border-right: 1px solid black;
+                .content-rvw{
+                    padding: 6.5rem 4.5rem;
+                    .itm-rvw-p{
+                        font-size: 1rem;
+                        color: components.$color-text;
+                    }
+                    .itm-rvw-people{
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: components.$color-text;
+                    }
+                }
+                &:last-child{
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.banner-game-bnr{
+    width: 100%;
+    height: auto;
+    .div-banner-bnr{
+        background-color: #000000a8;
+        max-width: 100%;
+        height: 45.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bnr-descrip-div{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+            .bnr-title{
+                font-size: 3rem;
+                font-weight: 900;
+                font-family: $text-font-full;
+                color: white;
+            }
+            .bnr-ph{
+                width: 79%;
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+}
+#banner-game1{
+    background-image: url(../img/sniper-fury-font.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#banner-game2{
+    background-image: url(../img/codm-fondo-gm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#banner-game3{
+    background-image: url(../img/asphalt_font2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.playGame-sec-plyg{
+    min-width: 100%;
+    height: auto;
+    background-color: components.$color-pag;
+    .div-playGame{
+        width: auto;
+        margin-top: 5rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .div-plyg{
+            filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.185));
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 8rem;
+            border-radius: 1.5rem;
+            gap: 2rem;
+            .plyg-title{
+                color: components.$color-text;
+                font-size: 3rem;
+                font-weight: 900;
+                font-family: $text-font-full;
+                margin: 0;
+            }
+            .plyg-app{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.2rem;
+                .link-plyg img{
+                    width: 140px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+//************ CSS STYLE FOOTER *************
+.footer-pag{
+    background-color: components.$color-pag;
+    width: 100%;
+    height: auto;
+    .div-footer-ct{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer-head-ct{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2rem;
+            .txt-footer{
+                padding: 1rem;
+                .lx-footer-text{
+                    color: components.$color-text;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+            }
+        }
+        .footer-content-main{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: first baseline;
+            gap: 2rem;
+            padding: 2rem 0rem;
+            .footer-main{
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                .title-footer-main{
+                    color: components.$color-text;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding-bottom: 0.5rem;
+                }
+                .ul-footer{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0rem;
+                    padding: 0rem;
+                    gap: 0.5rem;
+                    .li-footer{
+                        @include components.li-nav();
+                        a{
+                            color: components.$color-text-gray;
+                        }
+                        span{
+                            color: components.$color-text-gray;
+                        }
+                        img{
+                            width: 8rem;
+                            height: 2.5rem;
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+                &-contact{
+                    @extend .footer-main;
+                }
+                &-navegation{
+                    @extend .footer-main;
+                }
+                &-social{
+                    @extend .footer-main;
+                }
+                &-platforms{
+                    @extend .footer-main;
+                }
+            }
+        }
+        .footer-down{
+            padding: 3.5rem 0rem;
+            .footer-terms{
+                color: components.$color-text-gray;
+            }
+        }
+        .line-footer-content{
+            width: 72%;
+            height: 1px;
+            background-color: components.$color-pag-bv;
+        }
+    }
+}
+
+
+// CSS STYLE BY RESPONSIVE SITE WEB

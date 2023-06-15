@@ -1,0 +1,273 @@
+@use "components";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+h1,h2,h3,h4,h5,h6,p,a,li{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.content-full{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-one{
+    width: 100%;
+    background-image: url(../img/fondo-music.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-menu{
+    width: 95%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img{
+            width: 80px;
+            border-radius: 50%;
+            filter: grayscale(100%);
+        }
+        a{
+            color: white;
+            font-weight: 900;
+            margin-bottom: 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+.wid-perfil{
+    width: 95%;
+    margin: 8rem 0 10rem 0;
+    text-align: left;
+    .sale{
+        width: 35%;
+        margin-left: 19rem;
+        h1{
+            font-weight: 600;
+            font-size: 5.5rem;
+            color: white;
+        }
+        ul{
+            padding-left: 0%;
+            .list{
+                color: white;
+                list-style: none;
+                font-size: 1.2rem;
+            }
+        }
+        .iconP{
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: white;
+            margin-right: 0.5rem;
+        }
+    }
+        
+}
+.social-wid{
+    position: fixed;
+    width: 95%;
+    margin-top: 20%;
+    display: flex;
+    justify-content:flex-end;
+    ul{
+        li{
+            list-style: none;
+            a{
+                color: white;
+                font-size: 1.2rem;
+                &:hover{
+                    color: rgb(216, 208, 208);
+                }
+            }
+        }
+    }
+}
+
+.producerInfo{
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .headinf{
+        margin-top: 5.5rem;
+        width: 32%;
+        margin-left: 21rem;
+        h1{
+            font-size: 3.2rem;
+            color: white;
+            font-weight: 700;
+            .prod{
+                color:components.$color-bd;
+            }
+        }
+    }
+    .partfix{
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .animationGif{
+            width: 30%;
+            img{
+                border-radius: 50%;
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+        .inf-more{
+            width: 20%;
+            p{
+                text-align:left;
+                font-weight: 100;
+                color: white;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+.fond-dj{
+    width: 100%;
+    padding: 22rem 0 10rem 0;
+    background-image: url(../img/fondo-menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0rem;
+}
+
+.dj-referenceM{
+    background-image: url(../img/fondo-principal.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    h1{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    p{
+        margin-bottom: 2rem;
+    }
+}
+
+.form-dj{
+    background-image: url(../img/dj-control.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 3rem;
+    .head-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0rem 1.4rem 0rem;
+        h1{
+            font-weight: 700;
+            font-size: 3.4rem;
+            margin-bottom: 1.4rem;
+        }
+        p{
+            width: 50%;
+            text-align: center;
+        }
+    }
+}
+.mh-form{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    .lb-form{
+        font-size: 0.8rem;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+    .tb-form{
+        .fl-input{
+            width: 100%;
+            position: relative;
+            input{
+                outline: none;
+                text-align: center;
+                color: white;
+                border: 1px solid white;
+                width: 15rem;
+                background-color: rgba(0, 0, 0, 0.377);
+                padding: 0.5rem;
+                &:focus{
+                    background-color: rgba(22, 22, 22, 0.747);
+                }
+            }
+            
+            .text-ms{
+                outline: none;
+                text-align: center;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.377);
+                border: 1px solid white;
+                width: 30rem;
+                &:focus{
+                    background-color: rgba(22, 22, 22, 0.747);
+                }
+            }
+        }
+        .fl-submit{
+            margin-top: 1.5rem;
+            #btn-submit{
+                color: rgb(0, 0, 0);
+                background-color: rgb(169, 82, 255);
+                border: none;
+                padding: 0.9rem 2.7rem 0.9rem 2.7rem;
+                font-size: 0.8rem;
+                &:hover{
+                    background: rgb(233, 225, 241);
+                    transition: ease 0.45s;
+                }
+            }
+        }
+    }
+    
+}
+
+.pg-footer{
+    background-color: rgb(8, 8, 8);
+    width: 100%;
+    padding: 0.6rem 0.5rem 0rem 0.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+.offcanvas{
+    padding: 12rem;
+}

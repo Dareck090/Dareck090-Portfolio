@@ -1,0 +1,136 @@
+
+
+@mixin btn-base{
+    padding: 0.60rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+@mixin btn-sm-modify{
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+}
+@mixin li-nav{
+    font-size: 1.05rem;
+    list-style: none;
+    display: inline;
+    margin-right: 2rem;
+}
+
+$color-main: #d0b48f;
+$color-text: #504232;
+
+.space-btn{
+    padding-top:0.5rem;
+}
+.space-btn2{
+    padding-top:1.5rem;
+}
+.btn-main{
+    @include btn-base();
+    background-color: transparent;
+    color:white;
+    border: solid 1px white;
+    &:hover{
+        transition: ease 0.5s;
+        background-color: white;
+        color: $color-main;
+    }
+    &-sm{
+        border: none;
+        color: $color-text;
+        background-color: $color-main;
+        @extend .btn-main;
+        @include btn-sm-modify();
+        padding: 0 1.2rem;
+    }
+    &-sub{
+        border: none;
+        color: $color-text;
+        background-color: $color-main;
+        @extend .btn-main;
+        @include btn-sm-modify();
+    }
+}
+.icon-into{
+    font-size: 1.7rem;
+    color: $color-main;
+}
+.btn-into{
+    @include btn-sm-modify();
+    gap: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-text;
+    background-color: transparent;
+    border: none;
+    &:hover{
+        transition: ease 0.5s;
+        color: $color-main;
+    }
+}
+.main-menu {
+    margin-bottom: 0;
+    li:first-child{
+        @include li-nav();
+        a{
+            color: $color-text;
+            text-decoration: none;
+            
+            &:hover{
+                color: $color-text;
+            }
+        }
+    }
+    li{
+        @include li-nav();
+        a{
+            font-weight: 300;
+            color: white;
+            text-decoration: none;
+            
+            &:hover{
+                color: $color-main;
+                transition:  ease 0.5s;
+            }
+        }
+    }
+}
+
+.socialbuilt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a{
+        color: rgb(255, 255, 255);
+        font-size: 1.25rem;
+        padding: 0 0.65rem;
+        border-radius: 50%;
+        &:hover{
+            transition: ease 0.5s;
+            color: $color-main;
+        }
+    
+    }
+}
+
+.features{
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    .icon-ft{
+        color: white;
+        font-size: 2.4rem;
+    }
+    .title-ft{
+        color: white;
+        font-size: 1.4rem;
+    }
+    .text-ft{
+        color: rgb(185, 184, 184);
+    }
+}
+.top-ft{
+    padding-bottom: 18rem;
+}

@@ -1,0 +1,57 @@
+<footer class="footer-pag">
+    <div class="div-footer-ct">
+        <div class="footer-head-ct">
+            <div class="btn-logo-footer">
+                <a href="#" class="txt-logo">Juegos Space</a>
+            </div>
+            <div class="txt-footer">
+                <span class="lx-footer-text">Una experiencia de juego inmersiva</span>
+            </div>
+        </div>
+        <div class="line-footer-content"></div>
+        <div class="footer-content-main">
+            <div class="footer-main-contact">
+                <h3 class="title-footer-main">Contacto</h3>
+                <ul class="ul-footer">
+                    <li class="li-footer"><a href="">Info@misitio.com</a></li>
+                    <li class="li-footer"><span>Tel: +52-33-12345678</span></li>
+                    <li class="li-footer"><span>Av. Fray A. Alcalde 10</span></li>
+                    <li class="li-footer"><span>44100 Gdl., Jal., México</span></li>
+                </ul>
+            </div>
+            <div class="footer-main-navegation">
+                <h3 class="title-footer-main">Navegacion</h3>
+                <ul class="ul-footer">
+                    <li class="li-footer"><a href="{{ url_for('index') }}#games">Juegos</a></li>
+                    <li class="li-footer"><a href="{{ url_for('empleos') }}">Empleo</a></li>
+                    <li class="li-footer"><a href="{{ url_for('about') }}">Acerca de</a></li>
+                    <li class="li-footer"><a href="#">Contacto</a></li>
+                    <li class="li-footer"><a href="{{ url_for('privacy') }}">Politica de privacidad</a></li>
+                    <li class="li-footer"><a href="{{ url_for('terms') }}">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-main-social">
+                <h3 class="title-footer-main">Social</h3>
+                <ul class="ul-footer">
+                    <li class="li-footer"><span>Discord</span></li>
+                    <li class="li-footer"><span>Twitch</span></li>
+                    <li class="li-footer"><span>Facebook</span></li>
+                    <li class="li-footer"><span>Youtube</span></li>
+                    <li class="li-footer"><span>Twitter</span></li>
+                    <li class="li-footer"><span>Likendln</span></li>
+                </ul>
+            </div>
+            <div class="footer-main-platforms">
+                <h3 class="title-footer-main">Encuentranos en</h3>
+                <ul class="ul-footer">
+                    <li class="li-footer"><img src="{{ url_for('static', filename='img/store_ios.PNG') }}" alt="app_store_ios"></li>
+                    <li class="li-footer"><img src="{{ url_for('static', filename='img/play_store.PNG') }}" alt="google_play_store"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line-footer-content"></div>
+        <div class="footer-down">
+            <span class="footer-terms">© 2035 Creado por JuegosSpace</span>
+        </div>
+    </div>
+</footer>

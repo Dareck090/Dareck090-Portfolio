@@ -1,0 +1,61 @@
+<nav class="nav-main">
+    <div class="nav-all">
+        <div class="nav-banner">
+            <div class="lm-main">
+                <i class="bi bi-box-seam i-box"></i>
+                <span class="ps-span">Envío gratis en compras de más de $499</span>
+            </div>
+            <ul class="ul-nav-site">
+                <li class="li-nav-site"><a href="#">Acerca de</a></li>
+                <li class="li-nav-site"><a href="#">Contacto</a></li>
+                <li class="li-nav-site"><a href="#">Asistencia</a></li>
+                <li class="li-nav-site"><a href="#">Llama +52-1-33-12345678</a></li>
+            </ul>
+        </div>
+        <div class="nav-store">
+            <div class="nv-stor1">
+                <div class="logo-nav">
+                    <a href="{%url 'index' %}"><span class="title-logo">RevNetx</span></a>
+                </div>
+                <div class="nav-search">
+                    <input class="inp-search" id="search-prd" type="search" placeholder="Buscar...">
+                    <button class="btn-search bi bi-search i-search"></button>
+                </div>
+            </div>
+            <div class="nv-stor2">
+                <div class="login-nav">
+                    <i class="bi bi-person-circle i-user"></i>
+                    <button class="btn-login">Entrar</button>
+                </div>
+                <div class="favorites-nav">
+                    <i class="bi bi-suit-heart i-heart"></i>
+                    <a class="text-fvt" href="#">Favoritos</a>
+                </div>
+                <div class="cart-store" id="store-check">
+                    <i class="bi bi-cart2 i-cart"></i>
+                    <div class="num-product">
+                        <span id="num-prd">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-category">
+            <ul class="ul-nav">
+                <li class="li-nav"><a class="link-ctg" href="{% url 'comprar-todo' %}">Comprar todo</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'computadoras' %}">Computadoras</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'tabletas' %}">Tabletas</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'drones_camaras' %}">Drones y camaras</a></li>
+                <li class="li-nav"><span class="link-ctg-dropdown">Audio</span>
+                    <div class="ctg-dropdown-audio" id="myDropAud">
+                        <a class="link-ctg-lm" href="{% url 'audifonos' %}">Audifonos</a>
+                        <a class="link-ctg-lm" href="{% url 'bocinas' %}">Bocinas</a>
+                    </div>
+                </li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'celulares' %}">Celulares</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'tv_cine' %}">T.V y cine en casa</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'tecnologia_portatil' %}">Tecnologia portatil</a></li>
+                <li class="li-nav"><a class="link-ctg" href="{% url 'ofertas' %}">Oferta</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,35 @@
+<ul class="product-list">
+    {% for product in products %}
+        <li class="list-li-prd" data-price="{{ product.product_price }}">
+            <div class="div-prd">
+                <a class="link-prd" href="{% url 'product_view' slug=product.slug %}">
+                    <div class="div-img-prd">
+                        <img class="img-prd" src="{{ product.product_image.url }}" width="300px" height="300px" alt="Imagen del producto">
+                    </div>
+                    <div class="div-body-prd">
+                        <p class="description-prd">{{ product.product_name }}</p>
+                        {% if show_offers and product.offer %}
+                            <span class="price-prd">
+                                <span class="price-prd line-price">{{ product.product_price }}$</span>
+                                {{ product.offer.product_total_offer }}$
+                            </span>
+                            <span class="offer-products">Oferta</span>
+                        {% else %}
+                            {% if product.offer and product.offer.is_product_on_sale %}
+                                <span class="price-prd">
+                                    <span class="price-prd line-price">{{ product.product_price }}$</span>
+                                    {{ product.offer.product_total_offer }}$
+                                </span>
+                                <span class="offer-products">Oferta</span>
+                            {% else %}
+                                <span class="price-prd">{{ product.product_price }}$</span>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+        </li>
+    {% empty %}
+        <p class="NotFoundProduct">No se encontraron mas productos.</p>
+    {% endfor %}
+</ul>

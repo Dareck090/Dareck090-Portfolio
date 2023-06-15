@@ -1,0 +1,583 @@
+
+@mixin btn-base{
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+}
+
+@mixin btn-full-modify{
+    padding: 1rem 2.2rem;
+    font-size: 0.95rem;
+}
+@mixin btn-sm-modify{
+    padding: 0.9rem 0.4rem;
+    font-size: 0.95rem;
+}
+@mixin li-nav{
+    font-size: 1.05rem;
+    list-style: none;
+    margin: 0;
+}
+
+$color-text: #FD6262;
+$color-text-hover:#b81515c9;
+$color-pag2: rgb(132, 159, 218);
+$color-pag: #141416;
+$color-pag-gris: rgba(97, 97, 97, 0.575);
+$color-wd:rgb(161, 161, 161);
+$color-text-gray: rgb(134, 132, 132);
+
+
+.btn-pag-full{
+    @include btn-full-modify();
+    background-color: $color-text;
+    border: 1px solid $color-text;
+    border-radius: 0.30rem;
+    transition: background-color .5s;
+    .txt-full{
+        font-size: 1.1rem;
+        color: black;
+    }
+    &:hover{
+        transition: ease 0.40s;
+        background-color: transparent;
+        border: 1px solid white;
+        .txt-full{
+            color: white;
+        }
+    }
+}
+.btn-submit{
+    @include btn-full-modify();
+        background-color: transparent;
+        transition: background-color .5s;
+        border: 1px solid $color-text-gray;
+        border-radius: 0.20rem;
+        position: relative;
+        bottom: 0.1rem;
+        .txt-submit{
+            color: $color-text-gray;
+            font-size: 1rem;
+        }
+        &:hover{
+            transition: ease 0.30s;
+            background-color: $color-pag2;
+            border: 1px solid $color-pag2;
+            .txt-start{
+                color: black;
+            }
+        }
+}
+
+.btn-pag-info{
+    @include btn-sm-modify();
+    background-color: $color-text;
+    border: 1px solid $color-text;
+    border-radius: 0.30rem;
+    transition: background-color .5s;
+    .txt-full{
+        font-size: 1.1rem;
+        color: black;
+    }
+    &:hover{
+        transition: ease 0.40s;
+        background-color: transparent;
+        border: 1px solid white;
+        .txt-full{
+            color: white;
+        }
+    }
+}
+.btn-pag-ready{
+    @include btn-full-modify();
+    background-color: $color-text;
+    border: 1px solid $color-text;
+    border-radius: 0.30rem;
+    transition: background-color .5s;
+    .txt-full{
+        font-size: 1.1rem;
+        color: black;
+    }
+    &:hover{
+        transition: ease 0.40s;
+        background-color: transparent;
+        border: 1px solid white;
+        .txt-full{
+            color: white;
+        }
+    }
+    &-sm{
+        @extend .btn-pag-ready;
+        padding: 0.9rem 1.5rem;
+    }
+    &-join{
+        @extend .btn-pag-ready;
+        padding: 0.2rem 2.5rem;
+    }
+}
+
+.nav-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 3.5rem;
+    .btn-login{
+        @include btn-base();
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        gap: 0.9rem;
+        i{
+            color: $color-text;
+            padding: 0rem;
+            border-radius: 100%;
+            margin: 0;
+            font-size: 1.6rem;
+        }
+        .txt-lg{
+            color: $color-text;
+            font-size: 1.1rem;
+        }
+        &:hover{
+            .txt-lg{
+                transition: ease 0.30s;
+                color: $color-text-hover;
+            }
+        }
+    }
+    .btn-start{
+        @include btn-base();
+        background-color: transparent;
+        transition: background-color .5s;
+        border: 1px solid white;
+        border-radius: 0.20rem;
+        position: relative;
+        bottom: 0.1rem;
+        .txt-start{
+            color: white;
+            font-size: 1rem;
+        }
+        &:hover{
+            transition: ease 0.30s;
+            background-color: $color-pag2;
+            border: 1px solid $color-pag2;
+            .txt-start{
+                color: black;
+            }
+        }
+    }
+}
+
+.btn-share{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+}
+//*********** STYLE NAV FOR ALL PAG 
+.navs{
+    background-color: $color-pag;
+    width: 100%;
+    position: fixed;
+    height: auto;
+    z-index: 2;
+    display: block;
+    transition: ease top 0.45s;
+    top: 0;
+    .nav-state{
+        width: 100%;
+        height: 5.6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo_sa{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            left: 3.5rem;
+            position: relative;
+            gap: 0.3rem;
+            .txt-logo{
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+        .nv-ul{
+            @include li-nav();
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-right: 1rem;
+            .nv-li{
+                a{
+                    font-weight: 400;
+                    color: white;
+                    font-size: 1rem;
+                }
+                &:hover{
+                    a{
+                        transition: ease 0.35s;
+                        color: $color-text;
+                    }
+                }
+            }
+        }
+    }
+    .chat-main{
+        position: fixed;
+        display: block;
+        right: 1.5rem;
+        bottom: 1.3rem;
+        .btn-chat{
+            cursor: pointer;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            background-color: $color-text;
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.5rem;
+            box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                            0 0  0 1px rgb(53, 54, 59),
+                            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            .icon-chat{
+                color: black;
+                font-size: 1.8rem;
+            }
+        }
+        .chat-layer{
+            display: none;
+            width: 22rem;
+            height: 30rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            flex-direction: column;
+            align-items: flex-start;
+            .cht-head{
+                width: 100%;
+                height: 17%;
+                padding: 1rem ;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                .cht-welcome{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                .txt-cht{
+                    font-size: 0.9rem;
+                    padding-bottom: 0.4rem;
+                    i{
+                        margin-right: 0.3rem;
+                        color: rgb(68, 170, 68);
+                    }
+                }
+                .btn-close{
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 27rem;;
+                }
+            }
+            .cht-panel{
+                height: 73%;
+                width: 100%;
+                background-image: linear-gradient(to bottom left,#eb4f4d, rgb(27, 27, 27));
+                padding: 1rem;
+                scroll-behavior: smooth;
+                overflow-y:scroll;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items:flex-end;
+                justify-content: flex-start;
+                .data-time{
+                    position: relative;
+                    width: auto;
+                    padding: 0.1rem;
+                    background-color: rgb(151, 148, 148);
+                    border-radius: 0.1rem;
+                    color: white;
+                    font-size: 0.7rem;
+                    top: -0.5rem;
+                    right: 7.9rem;
+                }
+                .chat-full{
+                    width: auto;
+                    height: auto;
+                    .msg-inbox{
+                        position: relative;
+                        width: auto;
+                        padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+                        background-color: #FD6262;
+                        border-radius: 0.2rem;
+                        color: black;
+                        font-size: 1rem;
+                        line-break: anywhere;
+                    
+                    }
+                }
+                .state-msg{
+                    position: relative;
+                    width: auto;
+                    padding: 0.2rem 0.5rem;
+                    background-color: white;
+                    border-radius: 0.2rem;
+                    color: $color-text-gray;
+                    font-size: 0.7rem;
+                    margin-top: 0.3rem;
+                }
+            }
+            .cht-msg{
+                width: 100%;
+                height: 10%;
+                .chat-form{
+                    display: flex;
+                    width: 93%;
+                    height: 100%;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .msg-chat-panel{
+                        width: 80%;
+                        margin-left: 1rem;
+                        #msg-send{
+                            width: 100%;
+                            border: none;
+                            height: auto;
+                            outline: 0;
+                            height: 100%;
+                            font-size: 1rem;
+                        }
+                    }
+                    .smileys{
+                        margin-left: 0.5rem;
+                        width: 5%;
+                        i{
+                            color: rgba(105, 103, 103, 0.61);
+                            &:hover{
+                                transition: ease 0.15s;
+                                color: #000;
+                            }
+                        }
+                    }
+                    .attach-file{
+                        display: none;
+                        width: 5%;
+                        i{
+                            input{
+                                border:none;
+                                background-image:none;
+                                background-color:transparent;
+                                -webkit-box-shadow: none;
+                                -moz-box-shadow: none;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                    .send-msg{
+                        width: 5%;
+                        .btn-submit{
+                            margin: 0;
+                            border: 0;
+                            padding: 0;
+                            background-color: transparent;
+                            outline: 0;
+                            img{
+                                width: 1rem;
+                                height: 1rem;
+                                filter: opacity(30%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-footer{
+    @include li-nav();
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .nv-li-footer{
+        a{
+            font-weight: 400;
+            color: rgb(134, 132, 132);
+            font-size: 1.1rem;
+        }
+        &:hover{
+            a{
+                transition: ease 0.35s;
+                color: rgba(151, 151, 151, 0.589);
+            }
+        }
+    }
+}
+
+.share-blog{
+    display: none;
+    background-color: $color-pag;
+    position: absolute;
+    margin-left: 8.4rem;
+    margin-top: 5rem;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+          1px 0px  1px 1px rgb(17, 17, 17),
+          0.3em 0.3em 0.5em rgba(0, 0, 0, 0.479);
+    .btn-share-social{
+        padding: 0.8rem 0.9rem;
+        border: 1px solid rgba(68, 67, 67, 0.062);
+        background-color: $color-pag;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.6rem;
+        .icon-sh{
+            font-size: 0.9rem;
+            color: white;
+            font-weight: 100;
+        }
+        .txt-share{
+            font-size: 0.9rem;
+            color: white;
+            font-weight: 400;
+        }
+    }
+}
+.active-share{
+    display: block;
+}
+.no-active-share{
+    display: none;
+}
+.share-news-panel{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a8;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    .btn-hide-sh{
+        position:fixed;
+        bottom: 38rem;
+        right: 1rem;
+        .btn-close-sh{
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: 0;
+            font-size: 2.5rem;
+            i{
+                color: white;
+                &:hover{
+                    transition: ease 0.3s;
+                    color: rgba(255, 255, 255, 0.63);
+                }
+            }
+        }
+        
+    }
+    .sh-social-div{
+        background-color: $color-pag;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5rem 5rem;
+        gap: 1.7rem;
+        .sh-title{
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        .sh-social-icon{
+            display: flex;
+            gap: 2rem;
+            img{
+                cursor: pointer;
+                width: 3rem;
+                height: 3rem;
+            }
+            .btn-link{
+                border: 0;
+                background-color: transparent;
+                margin: 0;
+                padding: 0.3rem 0.8rem;
+                background-color: #333333;
+                border-radius: 5rem;
+                img{
+                    color: #000;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+    .sh-link-div{
+        position: absolute;
+        background-color: #141416;
+        display: none;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 4rem;
+        gap: 1.9rem;
+        .sh-title{
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        .put-link{
+            width: 20rem;
+            height: 2.6rem;
+            background-color: $color-pag;
+            color: white;
+            border: 1px solid rgba(128, 128, 128, 0.356);
+            outline: none;
+        }
+        .btn-links{
+            display: flex;
+            gap: 1.5rem;
+            position: relative;
+            left: 1.7rem;
+            .btn-cancel{
+                @include btn-sm-modify();
+                background-color: $color-pag;
+                border: 1px solid $color-text;
+                padding: 0.4rem 1.2rem;
+                .txt-cancel{
+                    color: $color-text;
+                    font-weight: 600;
+                }
+            }
+            .btn-copy-lk{
+                @include btn-sm-modify();
+                background-color: $color-text;
+                border: 2px solid $color-text;
+                padding: 0.4rem 1.2rem;
+                .txt-link{
+                    color: $color-pag;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{% url 'computadoras' as computadoras_url %}
+{% url 'tabletas' as tabletas_url %}
+{% url 'drones_camaras' as drones_camaras_url %}
+{% url 'celulares' as celulares_url %}
+{% url 'audifonos' as audifonos_url %}
+{% url 'bocinas' as bocinas_url %}
+{% url 'tv_cine' as tv_cine_url %}
+{% url 'tecnologia_portatil' as tecnologia_portatil_url %}
+
+
+<div class="dropdown-category">
+    <ul class="ul-category">
+        {% if request.path == computadoras_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ computadoras_url }}">Todos</a></li>
+        {% elif request.path == tabletas_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ tabletas_url }}">Todos</a></li>
+        {% elif request.path == drones_camaras_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ drones_camaras_url }}">Todos</a></li>
+        {% elif request.path == celulares_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ celulares_url }}">Todos</a></li>
+        {% elif request.path == audifonos_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ audifonos_url }}">Todos</a></li>
+        {% elif request.path == bocinas_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ bocinas_url }}">Todos</a></li>
+        {% elif request.path == tv_cine_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ tv_cine_url }}">Todos</a></li>
+        {% elif request.path == tecnologia_portatil_url %}
+            <li class="li-category"><a class="title-ctg current" href="{{ tecnologia_portatil_url }}">Todos</a></li>
+        {% else %}
+            <li class="li-category"><a class="title-ctg current" href="{% url 'ofertas' %}">Todos</a></li>
+        {% endif %}
+
+        {% if category != 'Oferta' %}
+            <li class="li-category"><a class="filter-text" href="?offers=1">Ofertas</a></li>
+        {% endif %}
+
+        {% for category in categories %}
+            <li class="li-category"><a class="filter-text" href="?category={{ category.product_category }}">{{ category.product_category }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

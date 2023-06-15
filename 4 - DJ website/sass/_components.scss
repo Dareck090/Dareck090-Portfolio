@@ -1,0 +1,282 @@
+@mixin btn-base{
+    padding: 1.2rem 3.4rem;
+    font-size: 1rem;
+}
+
+@mixin btn-sm-modify{
+    padding: 0.20rem 1.2rem;
+    font-size: 0.95rem;
+}
+
+@mixin li-nav{
+    display: flex;
+    border: solid 1px white;
+    border-right:none;
+    background-color: transparent;
+    a{
+        padding: 0.5rem 2.6rem; 
+    }
+}
+
+@mixin btn-song{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    i{
+        color: white;
+        font-size: 2rem;
+        &:hover{
+            transition: ease 0.40s;
+            color: $color-bd;
+        }
+    }
+}
+
+@mixin btn-social{
+    padding: 12px 0px 0px 16px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    display: block;
+    
+    i{
+        font-size: 1.4rem;
+        &:hover{
+            transition: ease 0.4s;
+            filter: opacity(50%);
+        }
+    }
+}
+
+$color-bd: rgba(173, 75, 230, 0.938);
+
+// Button on the page
+.btn-full{
+    @include btn-base();
+    background-color: $color-bd;
+    color: black;
+    border: none;
+    font-weight: 100;
+    &:hover{
+        transition: ease 0.5s;
+        background-color: transparent;
+        color: white;
+        border: solid 1px white ;
+    }
+}
+
+//main-menu
+.main-menu {
+    margin-bottom: 0;
+    display: flex;
+    li{
+        color: white;
+        @include li-nav();
+        
+        &:hover{
+            transition: ease 0.40s;
+            background-color: rgb(14, 13, 13);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    li:last-child{
+        border-right: solid 1px white;
+    }
+    
+}
+
+.name-dj{
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover{
+        color: white;
+    }
+}
+.beat-show{
+    margin-bottom: 4rem;
+}
+.list-group{
+    border: 1px solid white;
+    border-radius: 1px 1px 1px 1px;
+    background-color: transparent;
+    h5{
+        width: 5%;
+        color: white;
+        font-weight: 700;
+        margin: 2rem 2rem 2rem 2rem;
+    }
+}
+.space{
+    margin: 0rem 2rem 2rem 2rem;
+}
+.list-group-item{
+    width: 53rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border-top: 1px solid rgb(107, 105, 105);
+    border-bottom: 1px solid rgb(107, 105, 105);
+    .icon{
+        color: white;
+        font-size: 1.9rem;
+        border-radius: 0.1rem;
+        border: 1px solid white;
+        padding: 0rem 0.2rem 0rem 0.4rem;
+        &-sm{
+            font-size: 1rem;
+            color: white;
+            position: relative;
+            left: 40rem;
+        }
+    }
+    
+    span{
+        color: white;
+    }
+    &:hover{
+        .icon{
+            color: $color-bd;
+            &-sm{
+                color: $color-bd;
+            }
+        }
+        span{
+            color: $color-bd;
+        }
+    }
+}
+
+//AQUI ESTA EL PROBLEMA
+.pag-prod{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fafafa;
+    display: none;
+    transition: 0.5s;
+    .music-prod{
+        width: 50%;
+        background-image: url(../img/fondo-music.jpg);
+        background-repeat: no-repeat;
+        background-size:80rem;
+        background-position: center;
+        .goSite{
+            position: fixed;
+            #btn-go{
+                @include btn-sm-modify();
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-weight: 100;
+                &:hover{
+                    font-size: 1rem;
+                    text-decoration:underline;
+                    transition: ease 0.5s;
+                }
+            }
+        }
+        .controls-song{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .controls{
+                display: flex;
+                .prev{
+                    @include btn-song();
+                }
+                .play{
+                    @include btn-song();
+                    i{
+                        font-size: 3rem;
+                    }
+                }
+                .next{
+                    @include btn-song()
+                }
+            }
+            .duration-song{
+                color: white;
+            }
+        }
+
+    }
+    .reference-dj{
+        width: 50%;
+        color: black;
+        .btn-my{
+            position: fixed;
+            margin: 1rem;
+            right: 0%;
+        }
+        .header-dj{
+            margin: 4rem 4rem 0rem 4rem;
+            .title-song{
+                font-size: 2rem;
+                font-weight: 700;
+                margin: 0;
+                color: black;
+            }
+            span{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+        .btn {
+            color: rgb(0, 0, 0);
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+        
+        .dropdown {
+            margin-left: 3rem;
+            position: absolute;
+            display: flex;
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color:white;
+                min-width: auto;
+                z-index: 1;
+                #btn-fb{
+                    @include btn-social()
+                }
+                #btn-wp{
+                    @include btn-social()
+                }
+                #btn-tt{
+                    @include btn-social()
+                }
+            }
+            &:hover .dropdown-content{
+                display:flex;
+            }
+        }
+
+        .body-ms{
+            text-align: justify;
+            margin: 4rem 4rem;
+            .separator-line{
+                width: 100%;
+                border-bottom: solid  1px rgb(172, 168, 168);
+                margin-bottom: 1rem;
+            }
+        }
+    } 
+    
+}
